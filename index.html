@@ -903,6 +903,9 @@ body {
     <a class="nav-item" href="#resources" onclick="setActive(this)">
       <span class="nav-dot" style="background:var(--electric)"></span> Full Resource Library
     </a>
+    <a class="nav-item" href="#your-library" onclick="setActive(this)">
+      <span class="nav-dot" style="background:var(--gold)"></span> Your Books + Paid Upgrades
+    </a>
     <a class="nav-item" href="#apps" onclick="setActive(this)">
       <span class="nav-dot" style="background:var(--teal)"></span> Android Apps
     </a>
@@ -973,6 +976,12 @@ body {
   <div class="hero-profile">
     <div class="hero-profile-dot"></div>
     <span><strong>Tailored for:</strong> BA CS (Wellesley) · MBA (Columbia Business School) · 15 years Technical PM · NYC-based · Morning learner (6–9am weekdays)</span>
+  </div>
+  <div style="margin-top:16px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:12px">
+    <span style="color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:1px;font-size:10px">Resource key →</span>
+    <span style="display:inline-flex;align-items:center;gap:6px;background:rgba(245,166,35,0.12);border:1px solid rgba(245,166,35,0.3);border-radius:6px;padding:4px 10px;color:var(--gold);font-weight:600">★ You already own this book</span>
+    <span style="display:inline-flex;align-items:center;gap:6px;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.3);border-radius:6px;padding:4px 10px;color:var(--green);font-weight:600">💰 Paid upgrade (up to $300) — genuinely better than free alternatives</span>
+    <span style="display:inline-flex;align-items:center;gap:6px;background:rgba(43,143,255,0.1);border:1px solid rgba(43,143,255,0.3);border-radius:6px;padding:4px 10px;color:var(--electric);font-weight:600">● Free resource</span>
   </div>
 </div>
 
@@ -1197,8 +1206,9 @@ body {
             <div class="week-col-label">Resources &amp; Links</div>
             <ul class="resource-list">
               <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://cs50.harvard.edu/x/" target="_blank">CS50x — Harvard (free)</a><span class="resource-url">https://cs50.harvard.edu/x/</span></div></li>
-              <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://docs.python.org/3/tutorial/" target="_blank">Python Official Tutorial</a><span class="resource-url">https://docs.python.org/3/tutorial/</span></div></li>
-              <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://youtu.be/rfscVS0vtbw" target="_blank">fCC Python 14-hr Course (YouTube)</a><span class="resource-url">https://youtu.be/rfscVS0vtbw</span></div></li>
+              <li class="resource-item"><span class="resource-dot" style="color:var(--gold)">★</span><div><span style="color:var(--gold);font-weight:700">📗 YOU OWN THIS — Start here:</span> Guttag, <em>Intro to Computation &amp; Programming Using Python</em>, Chs 1–4 (Getting Started → Functions &amp; Abstraction). MIT-level rigour. Read alongside fCC video — Guttag explains the <em>why</em>, fCC shows the <em>how</em>.<span class="resource-url">Chapters 1–4 map directly to Week 1–2 action items</span></div></li>
+              <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://youtu.be/rfscVS0vtbw" target="_blank">fCC Python 14-hr Course (YouTube) — watch alongside Guttag</a><span class="resource-url">https://youtu.be/rfscVS0vtbw</span></div></li>
+              <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://docs.python.org/3/tutorial/" target="_blank">Python Official Tutorial (reference)</a><span class="resource-url">https://docs.python.org/3/tutorial/</span></div></li>
               <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://learn.microsoft.com/en-us/windows/wsl/install" target="_blank">WSL2 Install Guide (Microsoft)</a><span class="resource-url">https://learn.microsoft.com/en-us/windows/wsl/install</span></div></li>
             </ul>
           </div>
@@ -1223,7 +1233,8 @@ body {
           <div class="week-col">
             <div class="week-col-label">Resources &amp; Links</div>
             <ul class="resource-list">
-              <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://automatetheboringstuff.com" target="_blank">Automate the Boring Stuff (free)</a><span class="resource-url">https://automatetheboringstuff.com</span></div></li>
+              <li class="resource-item"><span class="resource-dot" style="color:var(--gold)">★</span><div><span style="color:var(--gold);font-weight:700">📗 Guttag Chs 5–7</span> (Structured Types &amp; Mutability → Modules &amp; Files). Guttag's treatment of data structures has the CS rigour that Automate the Boring Stuff skips — read both in parallel.<span class="resource-url">Owned book — no cost</span></div></li>
+              <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://automatetheboringstuff.com" target="_blank">Automate the Boring Stuff Chs 1–6 (free, practical complement to Guttag)</a><span class="resource-url">https://automatetheboringstuff.com</span></div></li>
               <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://www.hackerrank.com/domains/python" target="_blank">HackerRank Python Domain</a><span class="resource-url">https://www.hackerrank.com/domains/python</span></div></li>
               <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://learngitbranching.js.org" target="_blank">Learn Git Branching (visual, interactive)</a><span class="resource-url">https://learngitbranching.js.org</span></div></li>
             </ul>
@@ -1249,7 +1260,8 @@ body {
           <div class="week-col">
             <div class="week-col-label">Resources &amp; Links</div>
             <ul class="resource-list">
-              <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://realpython.com/python3-object-oriented-programming/" target="_blank">Real Python OOP Guide</a><span class="resource-url">https://realpython.com/python3-object-oriented-programming/</span></div></li>
+              <li class="resource-item"><span class="resource-dot" style="color:var(--gold)">★</span><div><span style="color:var(--gold);font-weight:700">📗 Guttag Chs 8–10</span> (Testing &amp; Debugging → Classes &amp; OOP). This is the best concise treatment of Python OOP from a CS perspective — use it as your primary source for Week 3, with Real Python as a visual supplement.<span class="resource-url">Owned book — no cost</span></div></li>
+              <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://realpython.com/python3-object-oriented-programming/" target="_blank">Real Python OOP Guide (visual complement)</a><span class="resource-url">https://realpython.com/python3-object-oriented-programming/</span></div></li>
               <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://realpython.com" target="_blank">Real Python (free tutorials)</a><span class="resource-url">https://realpython.com</span></div></li>
             </ul>
           </div>
@@ -1305,16 +1317,18 @@ body {
       <div class="h3">Month 2 Goals</div>
       <ul class="bullet-list">
         <li>Master SQL fundamentals through advanced queries with PostgreSQL</li>
-        <li>Introduction to data analysis with Python (pandas, matplotlib)</li>
+        <li>Introduction to data analysis with Python (pandas, matplotlib) — using Guttag Chs 11–13</li>
         <li>Complete CS50x Weeks 5–7 (Data Structures, Python, SQL)</li>
-        <li>First exposure to HTML/CSS — build static pages</li>
+        <li>First exposure to HTML/CSS using your Duckett book — build static pages by Week 8</li>
       </ul>
       <div class="h3">Core Resources</div>
       <ul class="resource-list">
+        <li class="resource-item"><span class="resource-dot" style="color:var(--gold)">★</span><div><span style="color:var(--gold);font-weight:700">📗 Guttag Chs 11–13</span> (Algorithmic Complexity → Plotting &amp; More About Classes). Ch 13 introduces matplotlib — directly relevant to your data analysis goal this month. Read before starting Kaggle Pandas.<span class="resource-url">Owned book — no cost</span></div></li>
+        <li class="resource-item"><span class="resource-dot" style="color:var(--gold)">★</span><div><span style="color:var(--gold);font-weight:700">📘 Duckett, <em>HTML &amp; CSS</em>, Chs 1–10</span> (Structure → Forms → Extra Markup). Duckett's visual format is the fastest way to build an accurate mental model of HTML. Use Chs 1–7 in Week 7, Chs 8–10 in Week 8. Do every exercise.<span class="resource-url">Owned book — no cost. Replaces the need for any paid HTML course.</span></div></li>
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://sqlzoo.net" target="_blank">SQLZoo — interactive SQL lessons</a><span class="resource-url">https://sqlzoo.net</span></div></li>
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://mode.com/sql-tutorial/" target="_blank">Mode Analytics SQL Tutorial</a><span class="resource-url">https://mode.com/sql-tutorial/</span></div></li>
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://cs50.harvard.edu/python/" target="_blank">CS50P — Python by Harvard</a><span class="resource-url">https://cs50.harvard.edu/python/</span></div></li>
-        <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://www.kaggle.com/learn/python" target="_blank">Kaggle Python &amp; Pandas (free)</a><span class="resource-url">https://www.kaggle.com/learn/python</span></div></li>
+        <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://www.kaggle.com/learn/python" target="_blank">Kaggle Python &amp; Pandas (free — use after Guttag Ch 13)</a><span class="resource-url">https://www.kaggle.com/learn/python</span></div></li>
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://opendata.cityofnewyork.us" target="_blank">NYC Open Data (your first real dataset)</a><span class="resource-url">https://opendata.cityofnewyork.us</span></div></li>
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://www.freecodecamp.org/learn/relational-database/" target="_blank">fCC Relational Database Cert</a><span class="resource-url">https://www.freecodecamp.org/learn/relational-database/</span></div></li>
       </ul>
@@ -1333,10 +1347,13 @@ body {
         <li>Master JavaScript ES6+, DOM manipulation, fetch API, async/await</li>
         <li>Complete fCC JavaScript Algorithms and Data Structures Certification</li>
         <li>Build and deploy your first full-stack web application (Project 3)</li>
-        <li>Start The Odin Project: Full Stack JavaScript path</li>
+        <li>Complete Duckett <em>HTML &amp; CSS</em> Chs 11–19 (CSS layout, process &amp; design, practical)</li>
+        <li>Begin Niederst Robbins <em>Learning Web Design</em> — use as reference for CSS Flexbox, Grid, and responsive design</li>
       </ul>
       <div class="h3">Core Resources</div>
       <ul class="resource-list">
+        <li class="resource-item"><span class="resource-dot" style="color:var(--gold)">★</span><div><span style="color:var(--gold);font-weight:700">📘 Duckett <em>HTML &amp; CSS</em>, Chs 11–19</span> (Colour → Layout → Process &amp; Design → Practical Info). Chs 15–18 on layout and design process are especially valuable — they cover the visual thinking behind good HTML/CSS that most developer-focused tutorials skip entirely.<span class="resource-url">Owned book — no cost</span></div></li>
+        <li class="resource-item"><span class="resource-dot" style="color:var(--gold)">★</span><div><span style="color:var(--gold);font-weight:700">📙 Niederst Robbins <em>Learning Web Design</em> (5th ed.), Part III — CSS</span>: Chs 11–17 (Formatting Text → Colours → Backgrounds → Floating &amp; Positioning → Flexbox → Grid → Responsive Web Design). Use as your CSS reference for Project 3. The Flexbox and Grid chapters are current and excellent.<span class="resource-url">Owned book — no cost. The most current of your 3 books for modern CSS.</span></div></li>
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://javascript.info" target="_blank">The Modern JavaScript Tutorial (free, comprehensive)</a><span class="resource-url">https://javascript.info</span></div></li>
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/" target="_blank">fCC JavaScript Algorithms &amp; Data Structures Cert</a><span class="resource-url">https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/</span></div></li>
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://www.theodinproject.com/paths/full-stack-javascript" target="_blank">The Odin Project Full Stack JS</a><span class="resource-url">https://www.theodinproject.com/paths/full-stack-javascript</span></div></li>
@@ -1382,8 +1399,10 @@ body {
     </div>
     <div class="collapsible-body"><div class="collapsible-inner">
       <ul class="resource-list">
+        <li class="resource-item"><span class="resource-dot" style="color:var(--gold)">★</span><div><span style="color:var(--gold);font-weight:700">📙 Niederst Robbins <em>Learning Web Design</em>, Part IV — Web Images &amp; Part I</span>: Ch 23 (Web Image Basics), Ch 25 (SVG), and Ch 3 (How the Web Works) if you haven't read them. Also revisit her Part III CSS chapters alongside your accessibility work — she covers semantic HTML and accessible markup patterns that most CSS tutorials ignore.<span class="resource-url">Owned book — no cost</span></div></li>
+        <li class="resource-item"><span class="resource-dot" style="color:var(--green)">💰</span><div><span style="color:var(--green);font-weight:700">PAID UPGRADE — Highly Recommended:</span> <a href="https://www.refactoringui.com" target="_blank" style="color:var(--electric)">Refactoring UI</a> by Adam Wathan &amp; Steve Schoger — <strong>$149</strong>. No free equivalent. Teaches visual design specifically for people who think in code — colour systems, typography scales, spacing, component design. This is the book that makes your portfolio look senior-built, not developer-built.<span class="resource-url">https://www.refactoringui.com</span></div></li>
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://www.typescriptlang.org/docs/handbook/intro.html" target="_blank">TypeScript Official Handbook</a><span class="resource-url">https://www.typescriptlang.org/docs/handbook/intro.html</span></div></li>
-        <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://www.totaltypescript.com/tutorials" target="_blank">Total TypeScript — Matt Pocock (free)</a><span class="resource-url">https://www.totaltypescript.com/tutorials</span></div></li>
+        <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://www.totaltypescript.com/tutorials" target="_blank">Total TypeScript — Matt Pocock (free tier is excellent; Pro $150 if you plateau)</a><span class="resource-url">https://www.totaltypescript.com/tutorials</span></div></li>
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://web.dev/accessibility" target="_blank">Google Web Accessibility Fundamentals (free)</a><span class="resource-url">https://web.dev/accessibility</span></div></li>
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://webaim.org" target="_blank">WebAIM: Web Accessibility In Mind</a><span class="resource-url">https://webaim.org</span></div></li>
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://figma.com" target="_blank">Figma (free for individuals)</a><span class="resource-url">https://figma.com</span></div></li>
@@ -1451,7 +1470,10 @@ body {
     </div>
     <div class="collapsible-body"><div class="collapsible-inner">
       <ul class="resource-list">
-        <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://github.com/donnemartin/system-design-primer" target="_blank">System Design Primer (GitHub — free)</a><span class="resource-url">https://github.com/donnemartin/system-design-primer</span></div></li>
+        <li class="resource-item"><span class="resource-dot" style="color:var(--gold)">★</span><div><span style="color:var(--gold);font-weight:700">📗 Guttag Chs 14–18</span> (Knapsack &amp; Graph Problems → Dynamic Programming → Monte Carlo Simulation). These advanced chapters are the most directly relevant to AI/ML thinking you'll do in Phase 4. Reading them now builds the mathematical intuition that makes LLM concepts click faster.<span class="resource-url">Owned book — no cost. Read in Month 9 as Phase 4 prep.</span></div></li>
+        <li class="resource-item"><span class="resource-dot" style="color:var(--green)">💰</span><div><span style="color:var(--green);font-weight:700">PAID UPGRADE — Highly Recommended:</span> <a href="https://www.designgurus.io/course/grokking-the-system-design-interview" target="_blank" style="color:var(--electric)">Grokking the System Design Interview</a> (Educative) — <strong>~$79/year</strong>. Structured, interactive, interview-ready. The free GitHub version is incomplete. If your target role is Head of Engineering or CTO, investing here directly prepares you for the most common senior interview format.<span class="resource-url">https://www.designgurus.io</span></div></li>
+        <li class="resource-item"><span class="resource-dot" style="color:var(--green)">💰</span><div><span style="color:var(--green);font-weight:700">PAID UPGRADE — Essential for CTO Track:</span> <a href="https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/" target="_blank" style="color:var(--electric)">Designing Data-Intensive Applications</a> by Martin Kleppmann — <strong>~$60 (O'Reilly or Amazon)</strong>. The definitive system design book. Separates senior engineers from principal engineers and CTOs in interviews and real architecture discussions. Nothing free comes close.<span class="resource-url">https://dataintensive.net</span></div></li>
+        <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://github.com/donnemartin/system-design-primer" target="_blank">System Design Primer (GitHub — free, use as companion)</a><span class="resource-url">https://github.com/donnemartin/system-design-primer</span></div></li>
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://docs.github.com/en/actions" target="_blank">GitHub Actions Documentation (CI/CD)</a><span class="resource-url">https://docs.github.com/en/actions</span></div></li>
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://youtu.be/9zUHg7xjIqQ" target="_blank">fCC Docker Full Course (YouTube)</a><span class="resource-url">https://youtu.be/9zUHg7xjIqQ</span></div></li>
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://www.youtube.com/@ByteByteGo" target="_blank">ByteByteGo (System Design YouTube)</a><span class="resource-url">https://www.youtube.com/@ByteByteGo</span></div></li>
@@ -1474,8 +1496,10 @@ body {
     </div>
     <div class="collapsible-body"><div class="collapsible-inner">
       <ul class="resource-list">
+        <li class="resource-item"><span class="resource-dot" style="color:var(--gold)">★</span><div><span style="color:var(--gold);font-weight:700">📗 Guttag Chs 19–26</span> (Sampling &amp; Confidence → Understanding Experimental Data → Hypothesis Checking → Pandas → Machine Learning → Clustering → Classification). This is the most relevant section of your Guttag book — it bridges Python fundamentals directly into data science and ML. Read Chs 23–26 before starting fast.ai.<span class="resource-url">Owned book — no cost. These chapters are your ML on-ramp.</span></div></li>
+        <li class="resource-item"><span class="resource-dot" style="color:var(--green)">💰</span><div><span style="color:var(--green);font-weight:700">PAID UPGRADE — High Impact:</span> <a href="https://maven.com/swyx/ai-notes" target="_blank" style="color:var(--electric)">Maven AI Engineering cohort courses</a> — <strong>$150–$300</strong>. Live, cohort-based learning with practitioners actively building AI products. Look for: "LLM Bootcamp," "AI Engineering," and "AI for Product Managers." Your PM background makes these immediately actionable in ways most participants can't match.<span class="resource-url">https://maven.com — search "AI" and "LLM"</span></div></li>
+        <li class="resource-item"><span class="resource-dot" style="color:var(--green)">💰</span><div><span style="color:var(--green);font-weight:700">PAID UPGRADE — Best Value if committing to AI:</span> <a href="https://www.oreilly.com/online-learning/" target="_blank" style="color:var(--electric)">O'Reilly Learning subscription</a> — <strong>~$50/month or $499/year</strong>. Unlocks every O'Reilly book and video course, including Hands-On Machine Learning (Géron), Building LLM-Powered Apps, and every other AI title you'll need across Phases 4–6. If you use it consistently, this is the single highest-ROI spend in the curriculum.<span class="resource-url">https://www.oreilly.com/online-learning/</span></div></li>
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://course.fast.ai" target="_blank">fast.ai — Practical Deep Learning (free, world-class)</a><span class="resource-url">https://course.fast.ai</span></div></li>
-        <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ" target="_blank">Andrej Karpathy: Neural Networks Zero to Hero</a><span class="resource-url">youtube.com playlist</span></div></li>
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://www.deeplearning.ai/short-courses/" target="_blank">DeepLearning.AI Short Courses (most free — Andrew Ng)</a><span class="resource-url">https://www.deeplearning.ai/short-courses/</span></div></li>
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://huggingface.co/learn/nlp-course/" target="_blank">Hugging Face NLP Course (free)</a><span class="resource-url">https://huggingface.co/learn/nlp-course/</span></div></li>
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://github.com/openai/openai-cookbook" target="_blank">OpenAI Cookbook (GitHub)</a><span class="resource-url">https://github.com/openai/openai-cookbook</span></div></li>
@@ -1547,11 +1571,13 @@ body {
     </div>
     <div class="collapsible-body"><div class="collapsible-inner">
       <ul class="resource-list">
+        <li class="resource-item"><span class="resource-dot" style="color:var(--green)">💰</span><div><span style="color:var(--green);font-weight:700">PAID UPGRADE — Strongly Recommended for Exam Pass Rate:</span> <a href="https://learn.cantrill.io" target="_blank" style="color:var(--electric)">Adrian Cantrill's AWS SAA Course</a> or <a href="https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/" target="_blank" style="color:var(--electric)">Stephane Maarek on Udemy (AWS)</a> — <strong>$15–20 on Udemy sale</strong> (sales run constantly — never pay full price). Dramatically increases first-attempt pass rates. Given the AWS SAA exam costs $150, failing once costs more than the course. Udemy also has equivalent courses for GCP Associate and Azure Developer.<span class="resource-url">https://www.udemy.com — search "Stephane Maarek AWS"</span></div></li>
+        <li class="resource-item"><span class="resource-dot" style="color:var(--green)">💰</span><div><span style="color:var(--green);font-weight:700">PAID UPGRADE — Best Cloud Platform for Practice Labs:</span> <a href="https://acloudguru.com" target="_blank" style="color:var(--electric)">A Cloud Guru</a> — <strong>~$49/month</strong> (cancel after Month 14). Provides hands-on cloud sandboxes so you can practice on real AWS/GCP/Azure infrastructure without a credit card. The practice exams are particularly good.<span class="resource-url">https://acloudguru.com</span></div></li>
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://explore.skillbuilder.aws/learn/course/134/aws-cloud-practitioner-essentials" target="_blank">AWS Cloud Practitioner Essentials (free, Skill Builder)</a><span class="resource-url">explore.skillbuilder.aws</span></div></li>
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://cloudskillsboost.google" target="_blank">Google Cloud Skills Boost (free labs)</a><span class="resource-url">https://cloudskillsboost.google</span></div></li>
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://learn.microsoft.com/en-us/training/paths/az-900-describe-cloud-concepts/" target="_blank">Microsoft Learn: AZ-900 Azure Fundamentals (free)</a><span class="resource-url">learn.microsoft.com</span></div></li>
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://developer.hashicorp.com/terraform/tutorials" target="_blank">Terraform Learn (IaC — free)</a><span class="resource-url">https://developer.hashicorp.com/terraform/tutorials</span></div></li>
-        <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://youtu.be/Ia-UEYYR44s" target="_blank">fCC AWS Solutions Architect (YouTube)</a><span class="resource-url">https://youtu.be/Ia-UEYYR44s</span></div></li>
+        <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://youtu.be/Ia-UEYYR44s" target="_blank">fCC AWS Solutions Architect (YouTube — free)</a><span class="resource-url">https://youtu.be/Ia-UEYYR44s</span></div></li>
       </ul>
     </div></div>
   </div>
@@ -1847,13 +1873,15 @@ body {
     </div>
     <div class="collapsible-body"><div class="collapsible-inner">
       <ul class="resource-list">
-        <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://cs50.harvard.edu/python/" target="_blank">CS50P — Python by Harvard (best free Python course)</a><span class="resource-url">https://cs50.harvard.edu/python/</span></div></li>
-        <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://automatetheboringstuff.com" target="_blank">Automate the Boring Stuff (free online book)</a><span class="resource-url">https://automatetheboringstuff.com</span></div></li>
+        <li class="resource-item"><span class="resource-dot" style="color:var(--gold)">★</span><div><span style="color:var(--gold);font-weight:700">📗 YOU OWN THIS — Primary textbook:</span> Guttag, <em>Introduction to Computation and Programming Using Python</em> (MIT Press, 3rd ed., 26 chapters). Read Chs 1–13 in Months 1–2, Chs 14–18 in Month 9, Chs 19–26 in Month 10. Covers Python fundamentals, OOP, algorithms, data structures, plotting, data science, statistics, and ML — all with MIT-level precision. This book alone covers more ground than most paid bootcamps.<span class="resource-url">Owned. GitHub code: https://github.com/guttag/Intro-to-Computation-and-Programming</span></div></li>
+        <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://cs50.harvard.edu/python/" target="_blank">CS50P — Python by Harvard (best free Python course — use alongside Guttag)</a><span class="resource-url">https://cs50.harvard.edu/python/</span></div></li>
+        <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://automatetheboringstuff.com" target="_blank">Automate the Boring Stuff (free — practical companion to Guttag)</a><span class="resource-url">https://automatetheboringstuff.com</span></div></li>
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://realpython.com" target="_blank">Real Python (free + premium tutorials)</a><span class="resource-url">https://realpython.com</span></div></li>
-        <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://youtu.be/rfscVS0vtbw" target="_blank">fCC Python 14-hr YouTube Course</a><span class="resource-url">https://youtu.be/rfscVS0vtbw</span></div></li>
-        <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://www.hackerrank.com/domains/python" target="_blank">HackerRank Python Domain</a><span class="resource-url">https://www.hackerrank.com/domains/python</span></div></li>
+        <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://youtu.be/rfscVS0vtbw" target="_blank">fCC Python 14-hr YouTube Course (watch alongside Guttag for visual reinforcement)</a><span class="resource-url">https://youtu.be/rfscVS0vtbw</span></div></li>
+        <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://www.hackerrank.com/domains/python" target="_blank">HackerRank Python Domain (practice)</a><span class="resource-url">https://www.hackerrank.com/domains/python</span></div></li>
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://exercism.org/tracks/python" target="_blank">Exercism Python Track (free, mentored)</a><span class="resource-url">https://exercism.org/tracks/python</span></div></li>
-        <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://www.youtube.com/@coreyms" target="_blank">Corey Schafer Python (YouTube — excellent)</a><span class="resource-url">https://www.youtube.com/@coreyms</span></div></li>
+        <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://www.youtube.com/@coreyms" target="_blank">Corey Schafer Python (YouTube — excellent visual supplement)</a><span class="resource-url">https://www.youtube.com/@coreyms</span></div></li>
+        <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/" target="_blank">MIT OCW 6.0001 — the course Guttag's book is based on (free lecture videos)</a><span class="resource-url">https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/</span></div></li>
       </ul>
     </div></div>
   </div>
@@ -1864,7 +1892,11 @@ body {
     </div>
     <div class="collapsible-body"><div class="collapsible-inner">
       <ul class="resource-list">
-        <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://course.fast.ai" target="_blank">fast.ai — Practical Deep Learning (free)</a><span class="resource-url">https://course.fast.ai</span></div></li>
+        <li class="resource-item"><span class="resource-dot" style="color:var(--gold)">★</span><div><span style="color:var(--gold);font-weight:700">📗 Guttag Chs 19–26 — read first</span> (Sampling → Pandas → ML → Clustering → Classification). Your owned book is your best on-ramp to understanding the data science underpinning of LLMs before starting fast.ai or DeepLearning.AI courses.<span class="resource-url">Owned book — no cost</span></div></li>
+        <li class="resource-item"><span class="resource-dot" style="color:var(--green)">💰</span><div><span style="color:var(--green);font-weight:700">PAID — Best Value:</span> <a href="https://www.oreilly.com/online-learning/" target="_blank" style="color:var(--electric)">O'Reilly Learning</a> (~$499/yr) unlocks: <em>Hands-On Machine Learning</em> (Géron), <em>Building LLM-Powered Applications</em>, <em>Designing Data-Intensive Applications</em> (Kleppmann), and 60,000+ other titles. If you use it 3+ hours/week it pays for itself in Month 1.<span class="resource-url">https://www.oreilly.com/online-learning/</span></div></li>
+        <li class="resource-item"><span class="resource-dot" style="color:var(--green)">💰</span><div><span style="color:var(--green);font-weight:700">PAID — High Impact for AI:</span> <a href="https://maven.com" target="_blank" style="color:var(--electric)">Maven.com AI cohort courses</a> ($150–$300). Live learning with practitioners. Search: "LLM Bootcamp," "AI Engineering," "AI for Product." Your PM background gives you immediate advantage in these cohorts.<span class="resource-url">https://maven.com</span></div></li>
+        <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://course.fast.ai" target="_blank">fast.ai — Practical Deep Learning (free, world-class)</a><span class="resource-url">https://course.fast.ai</span></div></li>
+        <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ" target="_blank">Andrej Karpathy: Neural Networks Zero to Hero (YouTube)</a><span class="resource-url">https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ</span></div></li>
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://www.deeplearning.ai/short-courses/" target="_blank">DeepLearning.AI Short Courses (most free — Andrew Ng)</a><span class="resource-url">https://www.deeplearning.ai/short-courses/</span></div></li>
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://python.langchain.com/docs/" target="_blank">LangChain Python Docs</a><span class="resource-url">https://python.langchain.com/docs/</span></div></li>
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://docs.llamaindex.ai" target="_blank">LlamaIndex Docs (RAG framework)</a><span class="resource-url">https://docs.llamaindex.ai</span></div></li>
@@ -1880,15 +1912,27 @@ body {
       <span style="font-size:16px">📖</span><span class="collapsible-title">Essential Books</span><span class="collapsible-arrow">▼</span>
     </div>
     <div class="collapsible-body"><div class="collapsible-inner">
+      <div class="info-box gold" style="margin-bottom:14px">
+        <div class="info-box-title">📗 📘 📙 Your 3 Owned Books — Full Usage Map</div>
+        <ul>
+          <li><strong>Guttag (MIT Press)</strong> — 26 chapters, Python + CS + Data Science + ML. Use Chs 1–13 in Months 1–2, Chs 14–18 in Month 9 (AI prep), Chs 19–26 in Month 10 (data science on-ramp). This book carries you from zero Python to ML fundamentals.</li>
+          <li><strong>Duckett <em>HTML &amp; CSS</em></strong> — 19 chapters, visual HTML/CSS. Use Chs 1–10 in Month 2 (HTML foundation), Chs 11–19 in Month 3 (CSS layout + design thinking). Then keep it on your desk as a visual reference throughout Phase 2.</li>
+          <li><strong>Niederst Robbins <em>Learning Web Design</em> (5th ed.)</strong> — 25 chapters, covers HTML, CSS, JavaScript, and web images. Use Part III CSS (Chs 11–17) in Month 3 as your Flexbox/Grid/Responsive reference. Use Part II HTML (Chs 4–10) as a deeper HTML supplement to Duckett. Use Part V Images (Chs 23–25) in Month 5 when working on portfolio image optimization.</li>
+        </ul>
+      </div>
       <table class="data-table">
-        <thead><tr style="background:var(--navy3)"><th>Book</th><th>Author</th><th>Why It Matters</th></tr></thead>
+        <thead><tr style="background:var(--navy3)"><th>Book</th><th>Author</th><th>When to Use</th><th>Cost</th><th>Why It Matters</th></tr></thead>
         <tbody>
-          <tr><td>Clean Code</td><td>Robert Martin</td><td>Write professional, maintainable code from day one</td></tr>
-          <tr><td>The Pragmatic Programmer</td><td>Hunt &amp; Thomas</td><td>Mindset of elite, senior developers</td></tr>
-          <tr><td>Designing Data-Intensive Applications</td><td>Kleppmann</td><td>Systems design bible — CTO-level thinking</td></tr>
-          <tr><td><a href="https://github.com/getify/You-Dont-Know-JS" target="_blank">You Don't Know JS (6 books)</a></td><td>Kyle Simpson</td><td>Deep JavaScript mastery — free online</td></tr>
-          <tr><td><a href="https://automatetheboringstuff.com" target="_blank">Automate the Boring Stuff</a></td><td>Al Sweigart</td><td>Practical Python — free online</td></tr>
-          <tr><td>The Manager's Path</td><td>Camille Fournier</td><td>Engineering leadership + CTO track — read in Month 14</td></tr>
+          <tr style="background:rgba(245,166,35,0.06)"><td><strong>📗 Intro to Computation &amp; Programming Using Python</strong></td><td>John V. Guttag (MIT)</td><td>Months 1–2, 9–10</td><td style="color:var(--gold)">You own it</td><td>MIT-level CS rigour — algorithms, data structures, statistics, ML. 26 chapters that take you from Python basics to clustering algorithms.</td></tr>
+          <tr style="background:rgba(245,166,35,0.06)"><td><strong>📘 HTML &amp; CSS: Design and Build Websites</strong></td><td>Jon Duckett</td><td>Months 2–3, reference</td><td style="color:var(--gold)">You own it</td><td>Best visual introduction to HTML/CSS ever written. Full-color, visual explanations that work the way your designer-brain works.</td></tr>
+          <tr style="background:rgba(245,166,35,0.06)"><td><strong>📙 Learning Web Design (5th ed.)</strong></td><td>Jennifer Niederst Robbins</td><td>Months 3–5, reference</td><td style="color:var(--gold)">You own it</td><td>Most current of your 3 books — covers Flexbox, Grid, Responsive Design, and SVG. Bridges Duckett into modern CSS. Use as ongoing reference.</td></tr>
+          <tr style="background:rgba(34,197,94,0.06)"><td><strong>💰 Refactoring UI</strong></td><td>Adam Wathan &amp; Steve Schoger</td><td>Month 5</td><td style="color:var(--green)">$149</td><td>No free equivalent. Teaches visual design for developers — colour systems, spacing, typography. Makes your portfolio look senior, not developer-built.</td></tr>
+          <tr style="background:rgba(34,197,94,0.06)"><td><strong>💰 Designing Data-Intensive Applications</strong></td><td>Martin Kleppmann</td><td>Month 9–10</td><td style="color:var(--green)">~$60</td><td>The system design bible. Required reading for CTO-track roles. Covers databases, distributed systems, replication, and consistency at architectural depth.</td></tr>
+          <tr><td>Clean Code</td><td>Robert Martin</td><td>Month 7</td><td>Library / Amazon</td><td>Write professional, maintainable code from day one. Read while building Projects 6–8.</td></tr>
+          <tr><td>The Pragmatic Programmer</td><td>Hunt &amp; Thomas</td><td>Month 4</td><td>Library / Amazon</td><td>Mindset of elite, senior developers. Short chapters, immediately applicable.</td></tr>
+          <tr><td><a href="https://github.com/getify/You-Dont-Know-JS" target="_blank" style="color:var(--electric)">You Don't Know JS (6 books)</a></td><td>Kyle Simpson</td><td>Month 3–4</td><td>Free (GitHub)</td><td>Deep JavaScript mastery — free online. Read alongside The Odin Project.</td></tr>
+          <tr><td><a href="https://automatetheboringstuff.com" target="_blank" style="color:var(--electric)">Automate the Boring Stuff</a></td><td>Al Sweigart</td><td>Month 1–2</td><td>Free (online)</td><td>Practical Python projects — free online. Use alongside Guttag, not instead of it.</td></tr>
+          <tr><td>The Manager's Path</td><td>Camille Fournier</td><td>Month 14</td><td>Library / Amazon</td><td>Engineering leadership + CTO track. Read before applying to engineering leadership roles.</td></tr>
         </tbody>
       </table>
     </div></div>
@@ -1908,6 +1952,220 @@ body {
         <div class="card"><div class="card-label">Productivity</div><div class="card-title"><a href="https://notion.so" target="_blank" style="color:var(--electric)">Notion</a> + <a href="https://toggl.com/track/" target="_blank" style="color:var(--electric)">Toggl</a></div><div class="card-body">Notion for curriculum tracking; Toggl for measuring your actual study hours</div></div>
       </div>
     </div></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     YOUR LIBRARY + PAID UPGRADES
+═══════════════════════════════════════════════ -->
+<div class="doc-section" id="your-library">
+  <div class="section-header">
+    <div class="section-icon gold">📚</div>
+    <div class="section-title-block">
+      <div class="section-label">What You Have + What to Buy</div>
+      <div class="section-title">Your Books &amp; Paid Resource Upgrades</div>
+    </div>
+  </div>
+  <p class="section-body">This section is your single reference for every book you already own and every paid resource worth buying. The three books you have are genuinely excellent and collectively save you approximately $400–600 in courses you won't need. The paid upgrades below are the only places in this curriculum where money buys something with no comparable free alternative.</p>
+
+  <!-- OWNED BOOKS DEEP DIVE -->
+  <div class="h2">📗 📘 📙 Your 3 Owned Books — Complete Chapter-by-Chapter Map</div>
+
+  <div class="collapsible open">
+    <div class="collapsible-header" onclick="toggleCollapse(this.parentElement)">
+      <span style="font-size:18px">📗</span>
+      <span class="collapsible-title">Guttag — Introduction to Computation and Programming Using Python (MIT Press, 3rd ed.)</span>
+      <span style="background:rgba(245,166,35,0.15);color:var(--gold);font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;margin-left:4px;white-space:nowrap">USE MONTHS 1–2 + 9–10</span>
+      <span class="collapsible-arrow">▼</span>
+    </div>
+    <div class="collapsible-body"><div class="collapsible-inner">
+      <p class="section-body" style="margin-bottom:12px">This is the book behind MIT's most popular OpenCourseWare course (6.0001). It is rigorous without being inaccessible, and it's the only resource in your library that takes you from Python basics all the way to machine learning and clustering. It will make every other AI resource click faster because you'll understand the mathematical foundations underneath.</p>
+      <table class="data-table">
+        <thead><tr style="background:var(--navy3)"><th>Chapters</th><th>Topics</th><th>Use in Month</th><th>Why Important for This Curriculum</th></tr></thead>
+        <tbody>
+          <tr><td>Chs 1–4</td><td>Getting Started → Introduction to Python → Simple Numerical Programs → Functions &amp; Abstraction</td><td>Month 1 Wks 1–2</td><td>Your Python foundation. Read before fCC Python videos — Guttag explains the <em>why</em> behind every concept. Do all Finger Exercises.</td></tr>
+          <tr><td>Chs 5–7</td><td>Structured Types &amp; Mutability → Recursion &amp; Global Variables → Modules &amp; Files</td><td>Month 1 Wks 3–4</td><td>Deeper data structures with CS rigour. The recursion chapter (Ch 6) is particularly good — most Python tutorials skip this entirely.</td></tr>
+          <tr><td>Chs 8–10</td><td>Testing &amp; Debugging → Exceptions &amp; Assertions → Classes &amp; OOP</td><td>Month 1 Wk 3 / Month 2</td><td>Best concise treatment of Python testing and OOP from a computer science perspective. Ch 8 on debugging will save you hours every week for the rest of the curriculum.</td></tr>
+          <tr><td>Chs 11–12</td><td>Algorithmic Complexity → Simple Algorithms &amp; Data Structures</td><td>Month 2</td><td>Big-O notation, sorting algorithms, hash tables, and binary trees — the vocabulary of technical interviews. Read before attempting any LeetCode problems.</td></tr>
+          <tr><td>Ch 13</td><td>Plotting and More About Classes (matplotlib)</td><td>Month 2</td><td>Direct on-ramp to your NYC Open Data analysis project. Read this before starting Kaggle Pandas — it gives you the conceptual grounding Kaggle assumes.</td></tr>
+          <tr><td>Chs 14–15</td><td>Knapsack &amp; Graph Optimization → Dynamic Programming</td><td>Month 9</td><td>Advanced algorithms that underpin AI search and optimization. Read at the end of Phase 3 to prepare your mathematical thinking for Phase 4.</td></tr>
+          <tr><td>Chs 16–18</td><td>Random Walks &amp; Data Visualization → Stochastic Programs &amp; Distributions → Monte Carlo Simulation</td><td>Month 9</td><td>The probabilistic thinking here is exactly what you need to understand temperature, sampling, and randomness in LLMs. Read before Phase 4 AI modules.</td></tr>
+          <tr><td>Chs 19–22</td><td>Sampling &amp; Confidence → Understanding Experimental Data → Randomized Trials &amp; Hypothesis Checking → Statistics</td><td>Month 10</td><td>Statistical reasoning for AI — understanding why model evaluation metrics mean what they mean. Essential context for evaluating AI products as both builder and PM.</td></tr>
+          <tr><td>Ch 23</td><td>Exploring Data with Pandas</td><td>Month 10</td><td>Read before Kaggle's Pandas course. Guttag's treatment is more rigorous and will make the Kaggle exercises trivial by comparison.</td></tr>
+          <tr><td>Chs 24–26</td><td>A Quick Look at Machine Learning → Clustering → Classification Methods</td><td>Month 10</td><td>The conceptual bridge between Python and ML. Read before fast.ai — you'll understand what fast.ai is doing under the hood instead of treating it as magic.</td></tr>
+        </tbody>
+      </table>
+      <div class="info-box teal" style="margin-top:12px">
+        <div class="info-box-title">🔗 Free Companion Resources for Guttag</div>
+        <ul>
+          <li><a href="https://github.com/guttag/Intro-to-Computation-and-Programming" target="_blank" style="color:var(--electric)">Official GitHub repo</a> — all code files for every chapter, organised by chapter number</li>
+          <li><a href="https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/" target="_blank" style="color:var(--electric)">MIT OCW 6.0001</a> — free lecture videos, problem sets, and solutions based on this exact book</li>
+          <li><a href="https://ocw.mit.edu/courses/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/" target="_blank" style="color:var(--electric)">MIT OCW 6.0002</a> — continuation covering Chs 14–26 topics (data science, simulation, ML)</li>
+        </ul>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="collapsible">
+    <div class="collapsible-header" onclick="toggleCollapse(this.parentElement)">
+      <span style="font-size:18px">📘</span>
+      <span class="collapsible-title">Duckett — HTML &amp; CSS: Design and Build Websites (Wiley)</span>
+      <span style="background:rgba(245,166,35,0.15);color:var(--gold);font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;margin-left:4px;white-space:nowrap">USE MONTHS 2–3 + REFERENCE</span>
+      <span class="collapsible-arrow">▼</span>
+    </div>
+    <div class="collapsible-body"><div class="collapsible-inner">
+      <p class="section-body" style="margin-bottom:12px">Duckett's book is the most visually beautiful technical book ever written about HTML and CSS. Every page is designed as a piece of graphic design — code examples are displayed alongside full-colour illustrations that make the relationship between markup and rendered output completely intuitive. It's slightly dated (pre-Flexbox, pre-Grid) so pair it with Niederst Robbins for modern layout, but for building your HTML mental model and understanding CSS fundamentals, nothing beats it.</p>
+      <table class="data-table">
+        <thead><tr style="background:var(--navy3)"><th>Chapters</th><th>Topics</th><th>Use in Month</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Intro + Chs 1–3</td><td>How the Web Works · Structure · Text · Lists</td><td>Month 2 Wk 7</td><td>Read the Introduction — Duckett's explanation of how the web works (servers, browsers, DNS) is the clearest 10 pages on this topic anywhere. Do all exercises.</td></tr>
+          <tr><td>Chs 4–7</td><td>Links · Images · Tables · Forms</td><td>Month 2 Wk 7–8</td><td>Ch 7 (Forms) is particularly thorough — you'll reference it every time you build a form. Do the exercises alongside fCC Responsive Web Design.</td></tr>
+          <tr><td>Chs 8–10</td><td>Extra Markup · Flash/Video/Audio · Introducing CSS</td><td>Month 2 Wk 8</td><td>Ch 10 bridges you from HTML to CSS thinking — the box model explanation is excellent. Skip the Flash content (Ch 9 — Flash is dead), focus on audio/video.</td></tr>
+          <tr><td>Chs 11–14</td><td>Colour · Text · Boxes · Lists/Tables/Forms</td><td>Month 3 Wk 9</td><td>Core CSS visual properties. Read before building Project 3's frontend. Duckett's colour chapter is more design-oriented than most CSS tutorials.</td></tr>
+          <tr><td>Chs 15–18</td><td>Layout · Images · HTML5 Layout · Process &amp; Design</td><td>Month 3 Wk 9–10</td><td>Ch 15 (Layout) and Ch 18 (Process &amp; Design) are the most valuable chapters for you as a PM-turned-developer. Ch 15's float-based layout is older but teaches positioning fundamentals. Ch 18 is rare: a full UX process chapter in a coding book.</td></tr>
+          <tr><td>Ch 19</td><td>Practical Information (SEO, Analytics, FTP)</td><td>Month 3 Wk 10</td><td>Directly relevant to your portfolio blog SEO work. Read alongside the Google Search Console setup in your portfolio plan.</td></tr>
+        </tbody>
+      </table>
+      <div class="info-box electric" style="margin-top:12px">
+        <div class="info-box-title">⚠️ Important Note on Duckett's Age</div>
+        <ul>
+          <li>Duckett was published in 2011. It predates CSS Flexbox, CSS Grid, and modern responsive design. Use it for HTML structure (timeless), CSS fundamentals (still valid), and design thinking (excellent). For modern layout — Flexbox, Grid, and responsive breakpoints — use Niederst Robbins instead.</li>
+          <li>All HTML5 semantic elements (article, section, nav, aside, header, footer) are covered in Ch 17 and remain current.</li>
+        </ul>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="collapsible">
+    <div class="collapsible-header" onclick="toggleCollapse(this.parentElement)">
+      <span style="font-size:18px">📙</span>
+      <span class="collapsible-title">Niederst Robbins — Learning Web Design, 5th Edition (O'Reilly, 2018)</span>
+      <span style="background:rgba(245,166,35,0.15);color:var(--gold);font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;margin-left:4px;white-space:nowrap">USE MONTHS 3–5 + REFERENCE</span>
+      <span class="collapsible-arrow">▼</span>
+    </div>
+    <div class="collapsible-body"><div class="collapsible-inner">
+      <p class="section-body" style="margin-bottom:12px">This is your most current and comprehensive web design book — written by the designer of the first commercial website (O'Reilly's Global Network Navigator, 1993) and updated in 2018 to include Flexbox, CSS Grid, and responsive design. It covers HTML, CSS, JavaScript basics, and web images across 25 chapters with hands-on exercises and quizzes. Use it as your go-to reference from Month 3 onward — it sits at your desk, not on a shelf.</p>
+      <div class="info-box gold" style="margin-bottom:12px">
+        <div class="info-box-title">📌 6th Edition Coming July 2025</div>
+        <ul><li>Niederst Robbins has a 6th edition announced for July 2025 (with contributions from Aaron Gustafson). Your 5th edition remains completely valid — CSS Flexbox, Grid, and responsive design haven't changed fundamentally. If you want the newest version for Months 3–5, it will be available at <a href="https://learningwebdesign.com" target="_blank" style="color:var(--electric)">learningwebdesign.com</a></li></ul>
+      </div>
+      <table class="data-table">
+        <thead><tr style="background:var(--navy3)"><th>Part / Chapters</th><th>Topics</th><th>Use in Month</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Part I: Chs 1–3</td><td>Getting Started · Big Picture of the Web · How It Works</td><td>Month 2 (supplement)</td><td>Read if Duckett's intro left gaps. Robbins' web overview is equally clear and adds context on career paths — relevant for your CTO trajectory.</td></tr>
+          <tr><td>Part II: Chs 4–10</td><td>HTML for Structure — text, links, images, tables, forms, embedded media</td><td>Month 2 Wk 7–8</td><td>Use as a deeper HTML supplement to Duckett. Where Duckett is visual, Robbins is thorough. Her Forms chapter (Ch 9) is the most comprehensive of the two — good reference for Project 3 and later SaaS projects.</td></tr>
+          <tr><td>Part III: Chs 11–17</td><td>CSS: Formatting Text → Colours &amp; Backgrounds → Element Box Model → Floating &amp; Positioning → Flexbox → Grid Layout → Responsive Web Design</td><td>Month 3 Wks 9–12</td><td><strong>This is the most valuable part of the book for your curriculum.</strong> Chs 15 (Flexbox), 16 (Grid), and 17 (Responsive Web Design with media queries) are current, detailed, and directly applicable to every project from Month 3 onward. Use as your primary CSS reference instead of random Stack Overflow answers.</td></tr>
+          <tr><td>Part IV: Chs 18–22</td><td>JavaScript: Introduction → DOM Scripting → jQuery · JS Libraries</td><td>Month 3 (overview)</td><td>Skim Chs 18–20 for a visual overview of how JavaScript connects to HTML (the DOM chapter is excellent). Don't deep-dive here — use javascript.info for your primary JS learning. Use as a visual reference for DOM concepts.</td></tr>
+          <tr><td>Part V: Chs 23–25</td><td>Web Image Basics → Image Asset Production → SVG</td><td>Month 5</td><td>Read Ch 23 (Web Image Basics) when setting up portfolio image optimisation — covers WebP, responsive images, and the img srcset attribute. Ch 25 (SVG) is useful when you start building data visualisation projects in Phase 4.</td></tr>
+        </tbody>
+      </table>
+      <div class="info-box teal" style="margin-top:12px">
+        <div class="info-box-title">🔗 Free Companion Resources for Niederst Robbins</div>
+        <ul>
+          <li><a href="https://learningwebdesign.com" target="_blank" style="color:var(--electric)">learningwebdesign.com</a> — exercise files, student resources, and errata for the 5th edition</li>
+          <li><a href="https://github.com/scottgruber/LWD5e" target="_blank" style="color:var(--electric)">github.com/scottgruber/LWD5e</a> — community hands-on exercise solutions for the 5th edition</li>
+        </ul>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- HOW YOUR 3 BOOKS INTERLOCK -->
+  <div class="h2">How Your 3 Books Work Together — The Sequence</div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0">
+    <div class="card" style="border-color:rgba(245,166,35,0.4)">
+      <div class="card-label" style="color:var(--gold)">Months 1–2 · Python</div>
+      <div class="card-title" style="color:var(--gold)">Guttag is primary</div>
+      <div class="card-body">Guttag Chs 1–13 is your main Python textbook. fCC Python (YouTube) is the visual companion. Automate the Boring Stuff is the practical project companion. They cover the same ground from three different angles — use all three.</div>
+    </div>
+    <div class="card" style="border-color:rgba(245,166,35,0.4)">
+      <div class="card-label" style="color:var(--gold)">Months 2–3 · HTML &amp; CSS</div>
+      <div class="card-title" style="color:var(--gold)">Duckett then Robbins</div>
+      <div class="card-body">Start with Duckett (visual, intuitive, HTML fundamentals). Graduate to Robbins for Flexbox, Grid, and modern responsive layout. They're complementary, not redundant — Duckett builds the model, Robbins modernises it.</div>
+    </div>
+    <div class="card" style="border-color:rgba(245,166,35,0.4)">
+      <div class="card-label" style="color:var(--gold)">Months 9–10 · AI Prep</div>
+      <div class="card-title" style="color:var(--gold)">Guttag is the bridge</div>
+      <div class="card-body">Guttag Chs 14–26 gives you the probability, statistics, and ML foundations that make Phase 4 (LLMs, RAG, AI Agents) make sense at a deeper level. You'll be the only person in any AI cohort who actually understands the maths.</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- PAID UPGRADES SUMMARY -->
+  <div class="h2">💰 Paid Resource Upgrades — Complete Summary</div>
+  <p class="section-body">These are the only paid resources in the entire curriculum that are genuinely worth buying. Every other learning goal is covered by free resources of equal or better quality. Total smart spend: approximately <strong style="color:var(--green)">$700–$1,100 across 18 months</strong> — less than one month of a bootcamp, with better outcomes.</p>
+
+  <table class="data-table">
+    <thead><tr style="background:var(--navy3)"><th>Resource</th><th>Cost</th><th>Buy in Month</th><th>Why No Free Alternative</th><th>Where to Buy</th></tr></thead>
+    <tbody>
+      <tr style="background:rgba(34,197,94,0.05)">
+        <td><strong>Refactoring UI</strong><br><span style="font-size:11px;color:var(--muted)">Adam Wathan &amp; Steve Schoger</span></td>
+        <td style="color:var(--green);font-weight:700">$149</td>
+        <td>Month 5</td>
+        <td>Teaches visual design specifically for developers. No free equivalent at comparable depth. The single book most likely to make your portfolio stop looking developer-built.</td>
+        <td><a href="https://www.refactoringui.com" target="_blank" style="color:var(--electric)">refactoringui.com</a></td>
+      </tr>
+      <tr style="background:rgba(34,197,94,0.05)">
+        <td><strong>Designing Data-Intensive Applications</strong><br><span style="font-size:11px;color:var(--muted)">Martin Kleppmann</span></td>
+        <td style="color:var(--green);font-weight:700">~$60</td>
+        <td>Month 9</td>
+        <td>The system design bible. The GitHub free version is a summary, not the book. Required reading for CTO-track interviews. Databases, replication, distributed systems, consistency.</td>
+        <td><a href="https://dataintensive.net" target="_blank" style="color:var(--electric)">dataintensive.net</a> or Amazon</td>
+      </tr>
+      <tr style="background:rgba(34,197,94,0.05)">
+        <td><strong>Grokking the System Design Interview</strong><br><span style="font-size:11px;color:var(--muted)">Educative.io</span></td>
+        <td style="color:var(--green);font-weight:700">~$79/yr</td>
+        <td>Month 9</td>
+        <td>Interactive, interview-focused. The free GitHub version is missing most content. Directly prepares you for Head of Engineering and CTO interviews where system design is tested.</td>
+        <td><a href="https://www.designgurus.io/course/grokking-the-system-design-interview" target="_blank" style="color:var(--electric)">designgurus.io</a></td>
+      </tr>
+      <tr style="background:rgba(34,197,94,0.05)">
+        <td><strong>Maven AI Cohort Course</strong><br><span style="font-size:11px;color:var(--muted)">Various instructors — live</span></td>
+        <td style="color:var(--green);font-weight:700">$150–$300</td>
+        <td>Month 10–11</td>
+        <td>Live cohort-based learning with AI practitioners — you get direct access, Q&amp;A, and peer learning that no self-paced course replicates. Your PM background gives you unique advantage in these cohorts.</td>
+        <td><a href="https://maven.com" target="_blank" style="color:var(--electric)">maven.com</a> — search "LLM" or "AI Engineering"</td>
+      </tr>
+      <tr style="background:rgba(34,197,94,0.05)">
+        <td><strong>Udemy Cloud Exam Prep</strong><br><span style="font-size:11px;color:var(--muted)">Stephane Maarek / A Cloud Guru</span></td>
+        <td style="color:var(--green);font-weight:700">$15–20 each<br><span style="font-size:10px">(sale price)</span></td>
+        <td>Month 14</td>
+        <td>Dramatically increases first-attempt pass rate on AWS/GCP/Azure exams. Each exam costs $100–165 — failing once costs more than the course. Udemy runs 90% off sales constantly — never pay full price.</td>
+        <td><a href="https://www.udemy.com" target="_blank" style="color:var(--electric)">udemy.com</a> — search "Stephane Maarek AWS SAA" or "A Cloud Guru"</td>
+      </tr>
+      <tr style="background:rgba(34,197,94,0.05)">
+        <td><strong>O'Reilly Learning Subscription</strong><br><span style="font-size:11px;color:var(--muted)">If committing to AI engineering track</span></td>
+        <td style="color:var(--green);font-weight:700">~$499/yr</td>
+        <td>Month 10 (optional)</td>
+        <td>Unlocks every O'Reilly book + 30,000 videos including Hands-On ML (Géron), Building LLM-Powered Apps, Designing Data-Intensive Apps, and every cloud cert guide. Only worthwhile if you'll use it 3+ hrs/week.</td>
+        <td><a href="https://www.oreilly.com/online-learning/" target="_blank" style="color:var(--electric)">oreilly.com/online-learning</a></td>
+      </tr>
+      <tr>
+        <td><strong>Total TypeScript Pro</strong><br><span style="font-size:11px;color:var(--muted)">Matt Pocock — conditional buy</span></td>
+        <td style="color:var(--muted)">$150</td>
+        <td>Month 5–6 (only if needed)</td>
+        <td>Free tier is already very good. Only buy if you hit a TypeScript plateau in Month 5–6. The free tutorials cover ~70% of what most developers need.</td>
+        <td><a href="https://www.totaltypescript.com" target="_blank" style="color:var(--electric)">totaltypescript.com</a></td>
+      </tr>
+      <tr>
+        <td><strong>Epic React</strong><br><span style="font-size:11px;color:var(--muted)">Kent C. Dodds — conditional buy</span></td>
+        <td style="color:var(--muted)">$300</td>
+        <td>Month 6 (only if needed)</td>
+        <td>World-class React course. Only buy if The Odin Project React path leaves you uncertain about patterns. Most learners won't need it — The Odin Project + React docs are strong.</td>
+        <td><a href="https://www.epicreact.dev" target="_blank" style="color:var(--electric)">epicreact.dev</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="info-box rose" style="margin-top:16px">
+    <div class="info-box-title">🚫 Do NOT Buy These — Free Versions Are Equal or Better</div>
+    <ul>
+      <li><strong>Python fundamentals courses</strong> — CS50P + Guttag + Automate the Boring Stuff are already MIT/Harvard quality. Any paid Python course adds nothing.</li>
+      <li><strong>HTML/CSS courses</strong> — You own Duckett and Niederst Robbins. These two books together are better than any paid HTML/CSS course.</li>
+      <li><strong>JavaScript basics courses</strong> — javascript.info + The Odin Project + freeCodeCamp cover this comprehensively. Don't pay for it.</li>
+      <li><strong>SQL courses</strong> — SQLZoo + Mode Analytics + CS50x Week 7 are free and comprehensive. Serious SQL by Danny Ma is worth it only if you go deep into data engineering (not your primary track).</li>
+      <li><strong>Git/GitHub courses</strong> — Learn Git Branching + GitHub Skills are free and excellent. Nothing paid adds value here.</li>
+    </ul>
   </div>
 </div>
 
