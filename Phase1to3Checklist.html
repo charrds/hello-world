@@ -4,786 +4,810 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Phase 1–3 Master Checklist</title>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <style>
 :root {
-  --navy:     #08142b;
-  --navy2:    #0d1f40;
+  --bg:       #08142b;
+  --bg2:      #0d1f40;
   --surface:  #0f2035;
   --surface2: #152840;
   --border:   #1e3a5f;
-  --electric: #2b8fff;
-  --teal:     #00d4b4;
+  --p1:       #2b8fff;
+  --p2:       #00d4b4;
+  --p3:       #7c3aed;
   --gold:     #f5a623;
-  --purple:   #7c3aed;
   --green:    #22c55e;
   --rose:     #f43f5e;
   --orange:   #f97316;
   --muted:    #94a3b8;
   --text:     #e2eaf7;
   --text-sm:  #94a3b8;
-  --mono:     'DM Mono', monospace;
   --sans:     'Plus Jakarta Sans', sans-serif;
+  --mono:     'DM Mono', monospace;
   --r:        8px;
+  --r-lg:     12px;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body {
-  font-family: var(--sans);
-  background: var(--navy);
-  color: var(--text);
-  font-size: 14px;
-  line-height: 1.6;
-  min-height: 100vh;
-}
+body { font-family: var(--sans); background: var(--bg); color: var(--text); font-size: 14px; line-height: 1.6; }
 ::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: var(--navy2); }
+::-webkit-scrollbar-track { background: var(--bg2); }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
 
-/* ── LAYOUT ── */
-.page { max-width: 860px; margin: 0 auto; padding: 40px 24px 80px; }
+/* ── layout ── */
+.wrap { max-width: 820px; margin: 0 auto; padding: 36px 20px 100px; }
 
-/* ── HEADER ── */
-.header {
-  background: linear-gradient(135deg, var(--navy2), var(--navy));
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 28px 32px;
-  margin-bottom: 32px;
-}
-.header-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
-.header-title { font-size: 26px; font-weight: 700; color: #fff; margin-bottom: 6px; }
-.header-sub { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
-.header-stats { display: flex; gap: 20px; flex-wrap: wrap; }
-.stat { text-align: center; }
-.stat-n { font-family: var(--mono); font-size: 24px; font-weight: 700; display: block; }
-.stat-l { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+/* ── hero ── */
+.hero { background: linear-gradient(135deg, var(--bg2), var(--surface)); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 28px 32px 24px; margin-bottom: 28px; }
+.hero-tag { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--p2); margin-bottom: 8px; }
+.hero-title { font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+.hero-sub { font-size: 13px; color: var(--muted); margin-bottom: 22px; max-width: 580px; }
+.stats { display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 20px; }
+.stat-n { font-family: var(--mono); font-size: 26px; font-weight: 700; display: block; line-height: 1; }
+.stat-l { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 3px; }
+.key-row { display: flex; flex-wrap: wrap; gap: 7px; }
+.key-pill { font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 100px; border: 1px solid; }
 
-/* ── PROGRESS ── */
-.progress-wrap { margin-bottom: 28px; }
-.progress-label { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); margin-bottom: 6px; }
-.progress-label strong { color: var(--electric); font-family: var(--mono); }
-.progress-track { height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
-.progress-fill { height: 100%; background: linear-gradient(90deg, var(--electric), var(--teal)); border-radius: 3px; transition: width 0.4s ease; }
-.phase-progress { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 12px; }
-.pp { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); padding: 10px 14px; }
-.pp-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
-.pp-bar { height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; margin-bottom: 4px; }
-.pp-fill { height: 100%; border-radius: 2px; transition: width 0.4s; }
-.pp-count { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+/* ── progress ── */
+.progress-wrap { margin-bottom: 24px; }
+.prog-top { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); margin-bottom: 5px; }
+.prog-top strong { color: var(--p1); font-family: var(--mono); }
+.prog-bar { height: 5px; background: var(--border); border-radius: 3px; overflow: hidden; }
+.prog-fill { height: 100%; background: linear-gradient(90deg, var(--p1), var(--p2)); border-radius: 3px; transition: width 0.35s ease; }
+.phase-bars { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin-top: 10px; }
+.pb { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); padding: 9px 12px; }
+.pb-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+.pb-bar { height: 3px; background: var(--border); border-radius: 2px; overflow: hidden; margin-bottom: 4px; }
+.pb-fill { height: 100%; border-radius: 2px; transition: width 0.35s; }
+.pb-count { font-family: var(--mono); font-size: 10px; color: var(--muted); }
 
-/* ── CONTROLS ── */
-.controls { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; }
-.btn {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--r);
-  color: var(--text-sm);
-  font-family: var(--sans);
-  font-size: 12px;
-  font-weight: 600;
-  padding: 7px 14px;
-  cursor: pointer;
-  transition: all 0.15s;
-}
-.btn:hover { color: var(--text); border-color: var(--electric); }
-.btn.primary { background: var(--electric); color: #fff; border-color: var(--electric); }
-.btn.primary:hover { background: #1a7de8; }
-.btn.danger { border-color: var(--rose); color: var(--rose); }
-.btn.danger:hover { background: rgba(244,63,94,0.1); }
+/* ── controls ── */
+.controls { display: flex; gap: 7px; flex-wrap: wrap; margin-bottom: 24px; }
+.btn { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); color: var(--text-sm); font-family: var(--sans); font-size: 12px; font-weight: 600; padding: 7px 13px; cursor: pointer; transition: all 0.15s; }
+.btn:hover { color: var(--text); border-color: var(--p1); }
+.btn.active { background: var(--p1); color: #fff; border-color: var(--p1); }
+.btn.warn { border-color: var(--rose); color: var(--rose); }
+.btn.warn:hover { background: rgba(244,63,94,.1); }
 
-/* ── PHASE HEADER ── */
-.phase-header {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 16px 20px;
-  border-radius: 12px;
-  margin-bottom: 16px;
-  margin-top: 36px;
-}
-.phase-num { font-family: var(--mono); font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; opacity: 0.8; }
-.phase-title { font-size: 18px; font-weight: 700; color: #fff; flex: 1; }
-.phase-subtitle { font-size: 11px; color: rgba(255,255,255,0.6); }
-.phase-badge { font-family: var(--mono); font-size: 11px; background: rgba(255,255,255,0.15); padding: 3px 10px; border-radius: 100px; color: #fff; white-space: nowrap; }
+/* ── recurring box ── */
+.recurring { background: linear-gradient(135deg, rgba(244,63,94,.07), rgba(124,58,237,.05)); border: 1px solid rgba(244,63,94,.25); border-radius: var(--r-lg); padding: 18px 20px; margin-bottom: 28px; }
+.recurring-title { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--rose); margin-bottom: 12px; }
 
-/* ── MONTH BLOCK ── */
-.month-block { margin-bottom: 24px; }
-.month-header {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--text);
-  padding: 9px 14px;
-  border-radius: 8px 8px 0 0;
-  border: 1px solid var(--border);
-  border-bottom: none;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.month-count { font-family: var(--mono); font-size: 10px; color: var(--muted); margin-left: auto; }
+/* ── phase header ── */
+.phase-head { display: flex; align-items: center; gap: 14px; padding: 18px 22px; border-radius: var(--r-lg); margin: 36px 0 16px; }
+.phase-num { font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: 2px; opacity: .8; }
+.phase-name { font-size: 18px; font-weight: 700; color: #fff; flex: 1; }
+.phase-sub { font-size: 11px; color: rgba(255,255,255,.6); margin-top: 2px; }
+.phase-badge { font-family: var(--mono); font-size: 11px; background: rgba(255,255,255,.15); padding: 3px 10px; border-radius: 100px; color: #fff; white-space: nowrap; }
 
-/* ── SECTION LABEL ── */
-.section-label {
-  font-size: 9px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--muted);
-  padding: 10px 14px 4px;
-  background: var(--surface2);
-  border-left: 1px solid var(--border);
-  border-right: 1px solid var(--border);
-}
+/* ── month card ── */
+.month-card { margin-bottom: 20px; border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden; }
+.month-head { padding: 11px 16px; display: flex; align-items: center; gap: 10px; }
+.month-head-title { font-size: 13.5px; font-weight: 700; color: #fff; flex: 1; }
+.month-tally { font-family: var(--mono); font-size: 10px; color: var(--muted); }
 
-/* ── CHECKLIST ITEM ── */
-.items-wrap {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-top: none;
-  border-radius: 0 0 8px 8px;
-  overflow: hidden;
-}
-.item {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  padding: 10px 14px;
-  border-bottom: 1px solid rgba(30,58,95,0.5);
-  cursor: pointer;
-  transition: background 0.1s;
-  user-select: none;
-}
-.item:last-child { border-bottom: none; }
+/* ── section divider ── */
+.sec-div { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); padding: 8px 16px 4px; background: var(--surface2); border-top: 1px solid rgba(30,58,95,.4); }
+
+/* ── checklist item ── */
+.item-wrap { background: var(--surface); }
+.item { display: flex; align-items: flex-start; gap: 11px; padding: 9px 16px; border-top: 1px solid rgba(30,58,95,.4); cursor: pointer; transition: background .1s; user-select: none; }
+.item:first-child { border-top: none; }
 .item:hover { background: var(--surface2); }
-.item.done { background: rgba(34,197,94,0.04); }
+.item.done { background: rgba(34,197,94,.04); }
 .item.done .item-text { text-decoration: line-through; color: var(--muted); }
+.item.done .item-note { text-decoration: line-through; opacity: .5; }
+.cb { width: 17px; height: 17px; border: 2px solid var(--border); border-radius: 4px; flex-shrink: 0; margin-top: 2px; display: flex; align-items: center; justify-content: center; transition: all .15s; position: relative; }
+.item.done .cb { background: var(--green); border-color: var(--green); }
+.item.done .cb::after { content: '✓'; color: #08142b; font-size: 10px; font-weight: 800; }
+.item-inner { flex: 1; min-width: 0; }
+.item-text { font-size: 13px; color: var(--text); line-height: 1.5; }
+.item-note { font-size: 11px; color: var(--muted); font-style: italic; margin-top: 2px; line-height: 1.4; }
+.tag { font-size: 9px; font-weight: 700; font-family: var(--mono); padding: 2px 7px; border-radius: 4px; white-space: nowrap; flex-shrink: 0; align-self: flex-start; margin-top: 3px; text-transform: uppercase; }
+.t-do     { background: rgba(43,143,255,.15);  color: #2b8fff; }
+.t-read   { background: rgba(245,166,35,.15);  color: #f5a623; }
+.t-build  { background: rgba(34,197,94,.15);   color: #22c55e; }
+.t-brand  { background: rgba(124,58,237,.15);  color: #a78bfa; }
+.t-cert   { background: rgba(245,166,35,.15);  color: #f5a623; }
+.t-net    { background: rgba(0,212,180,.15);   color: #00d4b4; }
+.t-paid   { background: rgba(34,197,94,.12);   color: #22c55e; }
 
-.checkbox {
-  width: 18px; height: 18px;
-  border: 2px solid var(--border);
-  border-radius: 5px;
-  flex-shrink: 0;
-  margin-top: 1px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.15s;
-  position: relative;
-}
-.checkbox::after {
-  content: '';
-  width: 8px; height: 5px;
-  border-left: 2px solid #fff;
-  border-bottom: 2px solid #fff;
-  transform: rotate(-45deg) scale(0);
-  transition: transform 0.15s;
-  position: absolute;
-  top: 3px;
-}
-.item.done .checkbox { background: var(--green); border-color: var(--green); }
-.item.done .checkbox::after { transform: rotate(-45deg) scale(1); }
+/* ── cert section ── */
+.cert-section { background: rgba(245,166,35,.06); border-top: 1px solid rgba(245,166,35,.2); padding: 10px 16px; }
+.cert-section-title { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--gold); margin-bottom: 6px; }
 
-.item-text { font-size: 13px; line-height: 1.55; flex: 1; }
-.tag {
-  font-size: 9.5px; font-weight: 700; font-family: var(--mono);
-  padding: 2px 7px; border-radius: 4px; white-space: nowrap;
-  flex-shrink: 0; align-self: flex-start; margin-top: 2px;
-}
-.tag.read   { background: rgba(245,166,35,0.15); color: var(--gold); }
-.tag.do     { background: rgba(43,143,255,0.15);  color: var(--electric); }
-.tag.build  { background: rgba(34,197,94,0.15);   color: var(--green); }
-.tag.brand  { background: rgba(124,58,237,0.15);  color: #a78bfa; }
-.tag.cert   { background: rgba(245,166,35,0.15);  color: var(--gold); }
-.tag.network{ background: rgba(0,212,180,0.15);   color: var(--teal); }
-.tag.weekly { background: rgba(244,63,94,0.15);   color: var(--rose); }
-.tag.paid   { background: rgba(34,197,94,0.12);   color: var(--green); }
-.tag.own    { background: rgba(245,166,35,0.12);  color: var(--gold); }
+/* ── look-ahead ── */
+.lookahead { margin-top: 36px; padding: 22px 24px; background: linear-gradient(135deg, rgba(245,166,35,.06), rgba(244,63,94,.04)); border: 1px solid rgba(245,166,35,.3); border-radius: var(--r-lg); }
+.la-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 5px; }
+.la-title { font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+.la-sub { font-size: 13px; color: var(--muted); margin-bottom: 16px; }
 
-/* item with sub-note */
-.item-note { font-size: 11px; color: var(--muted); margin-top: 2px; font-style: italic; }
-.item-inner { flex: 1; }
-
-/* ── RECURRING BOX ── */
-.recurring-box {
-  background: linear-gradient(135deg, rgba(244,63,94,0.08), rgba(124,58,237,0.06));
-  border: 1px solid rgba(244,63,94,0.25);
-  border-radius: 10px;
-  padding: 16px 18px;
-  margin-bottom: 28px;
-}
-.recurring-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--rose); margin-bottom: 10px; }
-
-/* ── PRINT ── */
+/* ── print ── */
 @media print {
-  body { background: white; color: black; }
   .controls, .btn { display: none !important; }
   .progress-wrap { display: none; }
-  .phase-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { background: white; color: black; font-size: 12px; }
+  .phase-head { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .item { break-inside: avoid; }
 }
-
-/* ── RESPONSIVE ── */
 @media (max-width: 600px) {
-  .page { padding: 20px 16px 60px; }
-  .header { padding: 20px; }
-  .header-title { font-size: 20px; }
-  .phase-progress { grid-template-columns: 1fr; }
+  .wrap { padding: 16px 14px 80px; }
+  .hero { padding: 18px; }
+  .phase-bars { grid-template-columns: 1fr; }
   .tag { display: none; }
 }
 </style>
 </head>
 <body>
-<div class="page">
+<div class="wrap">
 
-<!-- HEADER -->
-<div class="header">
-  <div class="header-eyebrow">Full-Stack AI Mastery Curriculum · NYC Edition</div>
-  <div class="header-title">Phase 1–3 Master Checklist</div>
-  <div class="header-sub">Every reading, task, project, cert, brand action, and networking event for Months 1–9 — pulled from all sections of the curriculum into one place.</div>
-  <div class="header-stats">
-    <div class="stat"><span class="stat-n" style="color:#2b8fff" id="total-done">0</span><span class="stat-l">Completed</span></div>
-    <div class="stat"><span class="stat-n" style="color:#94a3b8" id="total-left">0</span><span class="stat-l">Remaining</span></div>
-    <div class="stat"><span class="stat-n" style="color:#00d4b4" id="total-pct">0%</span><span class="stat-l">Progress</span></div>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-tag">Full-Stack AI Mastery Curriculum · NYC Edition · Phases 1–3</div>
+  <div class="hero-title">Master Checklist — Months 1–9</div>
+  <div class="hero-sub">Every action item, reading, project, certification, blog post, and networking event extracted directly from the curriculum. Check items off as you go — progress saves automatically.</div>
+  <div class="stats">
+    <div><span class="stat-n" style="color:var(--p1)" id="s-done">0</span><div class="stat-l">Completed</div></div>
+    <div><span class="stat-n" style="color:var(--muted)" id="s-left">0</span><div class="stat-l">Remaining</div></div>
+    <div><span class="stat-n" style="color:var(--p2)" id="s-pct">0%</span><div class="stat-l">Progress</div></div>
+  </div>
+  <div class="key-row">
+    <span class="key-pill" style="color:var(--p1);border-color:rgba(43,143,255,.35)">DO — action</span>
+    <span class="key-pill" style="color:var(--gold);border-color:rgba(245,166,35,.35)">READ — reading</span>
+    <span class="key-pill" style="color:var(--green);border-color:rgba(34,197,94,.35)">BUILD — project</span>
+    <span class="key-pill" style="color:var(--gold);border-color:rgba(245,166,35,.35)">CERT — earn this</span>
+    <span class="key-pill" style="color:#a78bfa;border-color:rgba(124,58,237,.35)">BRAND — publish/post</span>
+    <span class="key-pill" style="color:var(--p2);border-color:rgba(0,212,180,.35)">NETWORK — attend/connect</span>
+    <span class="key-pill" style="color:var(--green);border-color:rgba(34,197,94,.35)">BUY — paid resource</span>
   </div>
 </div>
 
 <!-- PROGRESS -->
 <div class="progress-wrap">
-  <div class="progress-label"><span>Overall progress</span><strong id="prog-label">0 / 0</strong></div>
-  <div class="progress-track"><div class="progress-fill" id="prog-fill" style="width:0%"></div></div>
-  <div class="phase-progress">
-    <div class="pp">
-      <div class="pp-label" style="color:#2b8fff">Phase 1 · Months 1–3</div>
-      <div class="pp-bar"><div class="pp-fill" id="p1-fill" style="width:0%;background:#2b8fff"></div></div>
-      <div class="pp-count" id="p1-count">0 / 0</div>
-    </div>
-    <div class="pp">
-      <div class="pp-label" style="color:#00d4b4">Phase 2 · Months 4–6</div>
-      <div class="pp-bar"><div class="pp-fill" id="p2-fill" style="width:0%;background:#00d4b4"></div></div>
-      <div class="pp-count" id="p2-count">0 / 0</div>
-    </div>
-    <div class="pp">
-      <div class="pp-label" style="color:#7c3aed">Phase 3 · Months 7–9</div>
-      <div class="pp-bar"><div class="pp-fill" id="p3-fill" style="width:0%;background:#7c3aed"></div></div>
-      <div class="pp-count" id="p3-count">0 / 0</div>
-    </div>
+  <div class="prog-top"><span>Overall progress</span><strong id="prog-label">0 / 0</strong></div>
+  <div class="prog-bar"><div class="prog-fill" id="prog-fill" style="width:0%"></div></div>
+  <div class="phase-bars">
+    <div class="pb"><div class="pb-label" style="color:var(--p1)">Phase 1 · Mo 1–3</div><div class="pb-bar"><div class="pb-fill" id="b1" style="width:0%;background:var(--p1)"></div></div><div class="pb-count" id="c1">0/0</div></div>
+    <div class="pb"><div class="pb-label" style="color:var(--p2)">Phase 2 · Mo 4–6</div><div class="pb-bar"><div class="pb-fill" id="b2" style="width:0%;background:var(--p2)"></div></div><div class="pb-count" id="c2">0/0</div></div>
+    <div class="pb"><div class="pb-label" style="color:var(--p3)">Phase 3 · Mo 7–9</div><div class="pb-bar"><div class="pb-fill" id="b3" style="width:0%;background:var(--p3)"></div></div><div class="pb-count" id="c3">0/0</div></div>
   </div>
 </div>
 
 <!-- CONTROLS -->
 <div class="controls">
-  <button class="btn primary" onclick="window.print()">🖨 Print / Save PDF</button>
-  <button class="btn" onclick="filterItems('all')" id="f-all">Show All</button>
-  <button class="btn" onclick="filterItems('active')" id="f-active">Remaining Only</button>
-  <button class="btn" onclick="filterItems('done')" id="f-done">Completed Only</button>
-  <button class="btn danger" onclick="resetAll()">Reset All</button>
+  <button class="btn active" id="f-all"   onclick="filter('all')">Show All</button>
+  <button class="btn"        id="f-open"  onclick="filter('open')">Remaining</button>
+  <button class="btn"        id="f-done"  onclick="filter('done')">Completed</button>
+  <button class="btn"        onclick="window.print()">🖨 Print / Save PDF</button>
+  <button class="btn warn"   onclick="resetAll()">Reset All</button>
 </div>
 
-<!-- ═══════════════════════════════════════════
-     RECURRING — EVERY SINGLE DAY & WEEK
-═══════════════════════════════════════════ -->
-<div class="recurring-box">
-  <div class="recurring-title">🔁 Recurring Non-Negotiables — Every Week of Every Phase</div>
-  <div id="recurring-items"></div>
+<!-- RECURRING -->
+<div class="recurring">
+  <div class="recurring-title">🔁 Every Single Day &amp; Week — Non-Negotiables</div>
+  <div id="r-items"></div>
 </div>
 
-<!-- ═══════════════════════════════════════════
-     PHASE 1
-═══════════════════════════════════════════ -->
-<div class="phase-header" style="background:linear-gradient(135deg,#0d3a7a,#0d4f9e)">
-  <div>
-    <div class="phase-num">Phase 1</div>
-    <div class="phase-title">Foundations Rebuilt</div>
-    <div class="phase-subtitle">Python · Git · Linux · SQL · HTML/CSS · Web Basics</div>
+<!-- ONE-TIME SETUP -->
+<div class="month-card">
+  <div class="month-head" style="background:linear-gradient(90deg,#0a1628,#0d1f40)">
+    <div class="month-head-title">⚡ Before You Start — One-Time Setup</div>
+    <span class="month-tally" id="tally-setup"></span>
   </div>
+  <div class="item-wrap" id="setup-items"></div>
+</div>
+
+<!-- PHASE 1 -->
+<div class="phase-head" style="background:linear-gradient(135deg,#0d3a7a,#0d4f9e)">
+  <div><div class="phase-num">Phase 1</div><div class="phase-name">Foundations Rebuilt</div><div class="phase-sub">Python · Git · Linux · SQL · HTML/CSS · Web Basics</div></div>
   <div class="phase-badge">Months 1–3</div>
 </div>
+<div id="phase1"></div>
 
-<div id="phase1-items"></div>
-
-<!-- ═══════════════════════════════════════════
-     PHASE 2
-═══════════════════════════════════════════ -->
-<div class="phase-header" style="background:linear-gradient(135deg,#004d44,#006b5e);margin-top:48px">
-  <div>
-    <div class="phase-num">Phase 2</div>
-    <div class="phase-title">Front-End &amp; UI/UX Mastery</div>
-    <div class="phase-subtitle">React · TypeScript · Accessibility · Figma · Next.js · Portfolio</div>
-  </div>
+<!-- PHASE 2 -->
+<div class="phase-head" style="background:linear-gradient(135deg,#004d44,#006b5e);margin-top:48px">
+  <div><div class="phase-num">Phase 2</div><div class="phase-name">Front-End &amp; UI/UX Mastery</div><div class="phase-sub">React · TypeScript · Accessibility · Figma · Next.js · Portfolio</div></div>
   <div class="phase-badge">Months 4–6</div>
 </div>
+<div id="phase2"></div>
 
-<div id="phase2-items"></div>
-
-<!-- ═══════════════════════════════════════════
-     PHASE 3
-═══════════════════════════════════════════ -->
-<div class="phase-header" style="background:linear-gradient(135deg,#2d1b69,#4c1d95);margin-top:48px">
-  <div>
-    <div class="phase-num">Phase 3</div>
-    <div class="phase-title">Back-End, Databases &amp; APIs</div>
-    <div class="phase-subtitle">Node.js · FastAPI · PostgreSQL · REST · GraphQL · Docker · CI/CD</div>
-  </div>
+<!-- PHASE 3 -->
+<div class="phase-head" style="background:linear-gradient(135deg,#2d1b69,#4c1d95);margin-top:48px">
+  <div><div class="phase-num">Phase 3</div><div class="phase-name">Back-End, Databases &amp; APIs</div><div class="phase-sub">Node.js · FastAPI · PostgreSQL · REST · GraphQL · Docker · CI/CD</div></div>
   <div class="phase-badge">Months 7–9</div>
 </div>
+<div id="phase3"></div>
 
-<div id="phase3-items"></div>
+<!-- LOOK AHEAD -->
+<div class="lookahead">
+  <div class="la-label">Looking Ahead — Phase 4+</div>
+  <div class="la-title">3 High-Priority Certifications Coming Up</div>
+  <div class="la-sub">These fall in Phases 4–6. Plan ahead so you're ready when the month arrives.</div>
+  <div id="la-items"></div>
+</div>
 
-<div style="height:60px"></div>
-
-</div><!-- /page -->
+</div><!-- /wrap -->
 
 <script>
-// ─── DATA ────────────────────────────────────────────────────────────────────
-// tag types: read, do, build, brand, cert, network, weekly, paid, own
+// ═══════════════════════════════════════════════════════════════════════
+// DATA — extracted and consolidated from the full curriculum
+// ═══════════════════════════════════════════════════════════════════════
 
 const RECURRING = [
-  { text: "Code for at least 1 hour every day — no exceptions", tag: "weekly" },
-  { text: "Post daily #100DaysofCode update on X/Twitter (even 1 sentence + screenshot counts)", tag: "weekly" },
-  { text: "Make at least 1 meaningful GitHub commit every day", tag: "weekly" },
-  { text: "EVERY SUNDAY: Update portfolio site with week's progress (new projects, skills, or writing)", tag: "brand" },
-  { text: "EVERY SUNDAY: Post to LinkedIn — learnings, project screenshots, or reflections (2×/week minimum)", tag: "brand" },
-  { text: "EVERY SUNDAY: Connect with 10 new NYC tech professionals on LinkedIn", tag: "network" },
-  { text: "EVERY OTHER SUNDAY: Write and publish one technical blog post (600–1,200 words), cross-post to Hashnode and Dev.to", tag: "brand" },
-  { text: "EVERY SUNDAY: Update /now page on your portfolio site — current project, learning, reading", tag: "brand" },
-  { text: "Attend at least 3 in-person NYC tech events per month", tag: "network" },
-  { text: "Log study hours in Toggl or Notion — target 24–28 hours per week", tag: "do" },
+  { t: 'Code for at least 1 hour every single day — weekdays AND weekends, no exceptions', tag: 'do' },
+  { t: 'Post your #100DaysofCode update on X/Twitter daily — even one sentence + screenshot counts', tag: 'brand' },
+  { t: 'Make at least 1 meaningful GitHub commit every day', tag: 'do' },
+  { t: 'EVERY SUNDAY: Update portfolio site — new project, new skill, or updated case study', tag: 'brand' },
+  { t: 'EVERY SUNDAY: Post to LinkedIn — learnings, screenshots, or reflections (minimum 2× per week total)', tag: 'brand' },
+  { t: 'EVERY SUNDAY: Connect with 10 new NYC tech professionals on LinkedIn', tag: 'net' },
+  { t: 'EVERY OTHER SUNDAY: Publish one technical blog post (600–1,200 words), cross-post to Hashnode and Dev.to', tag: 'brand' },
+  { t: 'EVERY SUNDAY: Update /now page on portfolio — current project, current learning, current reading', tag: 'brand' },
+  { t: 'EVERY MONTH: Attend at least 3 in-person NYC tech events', tag: 'net' },
+  { t: 'Log all study hours in Toggl or Notion — target 24–28 hours per week', tag: 'do' },
 ];
 
-const PHASE1 = [
-  // ── BEFORE YOU START ──
-  { section: "Before You Start — One-Time Setup", items: [
-    { text: "Buy your name .com domain on Namecheap (~$12/yr)", tag: "do", note: "Do this today — don't wait" },
-    { text: "Optimise LinkedIn: professional headshot, keyword headline, strong About section", tag: "brand" },
-    { text: "Set up GitHub profile README (use: rahuldkjain.github.io/gh-profile-readme-generator)", tag: "brand" },
-    { text: "Create Hashnode account for developer blog", tag: "brand" },
-    { text: "Create Vercel account and connect to GitHub for auto-deploy", tag: "do" },
-    { text: "Join freeCodeCamp Discord, The Odin Project Discord, Women Who Code NYC", tag: "network" },
-    { text: "Follow on X/Twitter: @swyx, @fireship_dev, @simonw, @karpathy, @leeerob, @ylecun", tag: "brand" },
-    { text: "Sign up for: NY Tech Meetup, NYC Python Meetup, NY Code + Coffee, Black Tech NYC on Meetup.com", tag: "network" },
-    { text: "Find 1 #100DaysofCode accountability partner on X/Twitter — DM them before Day 1", tag: "network" },
-  ]},
-
-  // ── MONTH 1 ──
-  { section: "Month 1 — Python, Command Line & Version Control", items: [
-    // Week 1
-    { text: "WEEK 1: Install VS Code, Python 3.12, Git, WSL2 Ubuntu on Windows", tag: "do" },
-    { text: "WEEK 1: CS50x — complete Week 0 (Scratch) and Week 1 (C — skim for logic)", tag: "do", note: "cs50.harvard.edu/x/" },
-    { text: "WEEK 1: Read Guttag Chapters 1–4 (Getting Started → Functions & Abstraction)", tag: "read", note: "★ You own this. MIT-level Python foundation. Read before watching any videos." },
-    { text: "WEEK 1: Watch fCC Python 14-hr YouTube course — first 3 hours alongside Guttag", tag: "do", note: "youtu.be/rfscVS0vtbw" },
-    { text: "WEEK 1: Create GitHub profile README and first repo: 'python-fundamentals'", tag: "build" },
-    { text: "WEEK 1: Post Day 1 of #100DaysofCode on X/Twitter — do it today", tag: "brand" },
-    // Week 2
-    { text: "WEEK 2: Read Guttag Chapters 5–7 (Structured Types, Mutability, Modules & Files)", tag: "read", note: "★ Owned. Rigorous data structures with CS context that Automate the Boring Stuff skips." },
-    { text: "WEEK 2: Read Automate the Boring Stuff Chapters 1–6 (free at automatetheboringstuff.com)", tag: "read", note: "Practical complement to Guttag — read both in parallel" },
-    { text: "WEEK 2: CS50x — complete Week 2 (Arrays) and Week 3 (Algorithms)", tag: "do" },
-    { text: "WEEK 2: HackerRank Python (Easy) — solve 10 problems", tag: "do", note: "hackerrank.com/domains/python" },
-    { text: "WEEK 2: Git deep dive — branching, merging, rebasing on Learn Git Branching (learngitbranching.js.org)", tag: "do" },
-    // Week 3
-    { text: "WEEK 3: Read Guttag Chapters 8–10 (Testing & Debugging → Exceptions → Classes & OOP)", tag: "read", note: "★ Owned. Best concise Python OOP from a CS perspective. Ch 8 on debugging will save you hours every week." },
-    { text: "WEEK 3: Read Automate the Boring Stuff Chapters 8–11 (Files, debugging, web scraping)", tag: "read" },
-    { text: "WEEK 3: Real Python OOP tutorial series (realpython.com/python3-object-oriented-programming)", tag: "do" },
-    { text: "WEEK 3: BUILD PROJECT 1 — Python CLI Productivity Dashboard (tracks #100DaysofCode entries, progress bars, CSV export)", tag: "build", note: "Stack: Python 3.12, argparse, SQLite, Rich library, pytest" },
-    { text: "WEEK 3: Share Project 1 screenshot on LinkedIn", tag: "brand" },
-    // Week 4
-    { text: "WEEK 4: The Odin Project Foundations — Command Line Basics (theodinproject.com)", tag: "do" },
-    { text: "WEEK 4: Linux Journey — Grasshopper track (linuxjourney.com)", tag: "do" },
-    { text: "WEEK 4: Read Pro Git Book Chapters 1–3 (free: git-scm.com/book/en/v2)", tag: "read" },
-    { text: "WEEK 4: CS50x — complete Week 4 (Memory) — understand pointer concepts", tag: "do" },
-    { text: "WEEK 4: Push all Weeks 1–4 code to GitHub, update README", tag: "build" },
-    { text: "WEEK 4 SUNDAY: Write first blog post — 'Back to Code After 15 Years: What Month 1 Taught Me'", tag: "brand" },
-    { text: "WEEK 4 SUNDAY: Write second blog post — 'Why Every Technical PM Will Need to Read Code by 2027'", tag: "brand", note: "Leverage your PM expertise — attracts your target audience immediately" },
-    // Certs
-    { text: "MONTH 1 CERT: Complete CS50x certificate (free, Harvard) — finish all problem sets", tag: "cert", note: "cs50.harvard.edu/x/" },
-    { text: "MONTH 1 CERT: Complete Git & GitHub Foundations (GitHub Skills — free) at skills.github.com", tag: "cert" },
-    { text: "MONTH 1 CERT: Start Python Essentials 1 (Cisco NetAcad — free) at netacad.com", tag: "cert" },
-    // Networking
-    { text: "MONTH 1 NETWORKING: Attend TechBreakfast NYC (monthly, Midtown) — low-pressure, great for Month 1", tag: "network", note: "techbreakfast.com — relaxed morning format, 5 presenters" },
-    { text: "MONTH 1 NETWORKING: Attend NY Code + Coffee (weekly Sunday AM, rotating coffee shops)", tag: "network", note: "meetup.com/New-York-Code-Coffee — informal coding alongside others" },
-    { text: "MONTH 1 NETWORKING: Attend any General Assembly NYC free event", tag: "network", note: "generalassemb.ly — weekly free events, workshops, panels" },
-  ]},
-
-  // ── MONTH 2 ──
-  { section: "Month 2 — SQL, Data Analysis & HTML/CSS Preview", items: [
-    // Week 5 — SQL
-    { text: "WEEK 5: SQLZoo — complete SELECT basics through SUM and COUNT sections (sqlzoo.net)", tag: "do" },
-    { text: "WEEK 5: Mode Analytics SQL Tutorial — Basic and Intermediate sections (mode.com/sql-tutorial)", tag: "do" },
-    { text: "WEEK 5: Khan Academy Intro to SQL course (free — khanacademy.org)", tag: "do" },
-    { text: "WEEK 5: Install PostgreSQL locally and pgAdmin", tag: "do" },
-    { text: "WEEK 5: Read Guttag Chapters 11–12 (Algorithmic Complexity → Simple Algorithms & Data Structures)", tag: "read", note: "★ Owned. Big-O notation, sorting, hash tables — vocabulary of technical interviews." },
-    // Week 6 — Advanced SQL
-    { text: "WEEK 6: SQLZoo — complete Advanced sections (JOINs, subqueries, window functions)", tag: "do" },
-    { text: "WEEK 6: CS50x — complete Week 7 (SQL) and all problem sets", tag: "do" },
-    { text: "WEEK 6: fCC Relational Database Certification — SQL sections", tag: "do", note: "freecodecamp.org/learn/relational-database/" },
-    { text: "WEEK 6: Build a mini database for personal book or podcast tracking (practice PostgreSQL locally)", tag: "build" },
-    // Week 7 — Python Data Analysis
-    { text: "WEEK 7: Read Guttag Chapter 13 (Plotting and More About Classes — matplotlib introduction)", tag: "read", note: "★ Owned. Your matplotlib on-ramp — read before starting Kaggle Pandas." },
-    { text: "WEEK 7: CS50P (Python by Harvard) — complete Weeks 0–4 (cs50.harvard.edu/python)", tag: "do" },
-    { text: "WEEK 7: Kaggle Python + Pandas courses (free, interactive — kaggle.com/learn)", tag: "do" },
-    { text: "WEEK 7: Read Duckett HTML & CSS Chapters 1–7 (Structure → Images) — do every exercise", tag: "read", note: "★ Owned. Best visual HTML introduction ever written. Chs 1–7 = minimum HTML before CSS." },
-    { text: "WEEK 7: Choose an NYC Open Data dataset to analyse (opendata.cityofnewyork.us)", tag: "do" },
-    // Week 8 — First HTML/CSS + Month Wrap
-    { text: "WEEK 8: Read Duckett HTML & CSS Chapters 8–10 (Extra Markup → Introducing CSS) — do exercises", tag: "read", note: "★ Owned. Ch 10's box model explanation is excellent. Skip Ch 9 Flash content." },
-    { text: "WEEK 8: fCC Responsive Web Design Certification — start it (freecodecamp.org/learn/2022/responsive-web-design)", tag: "do" },
-    { text: "WEEK 8: CS50x — complete Week 8 (HTML/CSS/JS)", tag: "do" },
-    { text: "WEEK 8: BUILD PROJECT 2 — NYC Data Explorer Web App (query and visualise NYC Open Data with Python + SQL)", tag: "build", note: "Stack: Python, pandas, matplotlib, SQLite, Flask, HTML/CSS" },
-    { text: "WEEK 8 SUNDAY: Push Project 2 to GitHub with README and screenshots", tag: "build" },
-    { text: "WEEK 8 SUNDAY: Write blog post — 'How I Analysed NYC Open Data with Python and PostgreSQL'", tag: "brand" },
-    { text: "WEEK 8 SUNDAY: Write blog post — 'The Best Free SQL Resources for Beginners (Ranked and Reviewed)'", tag: "brand" },
-    // Certs
-    { text: "MONTH 2 CERT: Complete fCC Relational Database Certificate (freecodecamp.org/learn/relational-database)", tag: "cert" },
-    { text: "MONTH 2 CERT: Complete Python Essentials 1 — Cisco NetAcad (netacad.com)", tag: "cert" },
-    // Networking
-    { text: "MONTH 2 NETWORKING: Attend NY Tech Meetup (1st Tuesday, NYU Skirball Center) — 20K+ members", tag: "network", note: "meetup.com/ny-tech-meetup/ — largest NYC tech meetup" },
-    { text: "MONTH 2 NETWORKING: Attend NYC Python Meetup (monthly, rotating offices)", tag: "network", note: "meetup.com/nycpython/" },
-    { text: "MONTH 2 NETWORKING: Attend Women Who Code NYC or Black Tech NYC event", tag: "network", note: "womenwhocode.com/network/new-york | blacktechnyc.com" },
-  ]},
-
-  // ── MONTH 3 ──
-  { section: "Month 3 — JavaScript, DOM & First Full-Stack App", items: [
-    // Week 9 — JS Fundamentals
-    { text: "WEEK 9: The Modern JavaScript Tutorial — Parts 1–2 (javascript.info) — core language + browser", tag: "do" },
-    { text: "WEEK 9: fCC JavaScript Algorithms & Data Structures Cert — start it (freecodecamp.org/learn/javascript-algorithms-and-data-structures)", tag: "do" },
-    { text: "WEEK 9: The Odin Project Foundations JS section (theodinproject.com)", tag: "do" },
-    { text: "WEEK 9: Read Duckett HTML & CSS Chapters 11–14 (Colour → Text → Boxes → Lists/Tables/Forms CSS)", tag: "read", note: "★ Owned. Core CSS visual properties. Read before building Project 3 frontend." },
-    // Week 10 — ES6+ & DOM
-    { text: "WEEK 10: ES6+ deep dive — arrow functions, destructuring, spread/rest, modules, Promises", tag: "do" },
-    { text: "WEEK 10: CS50x Week 8 (HTML/CSS/JS) — complete Trivia problem set", tag: "do" },
-    { text: "WEEK 10: Read Duckett HTML & CSS Chapters 15–19 (Layout → Images → HTML5 Layout → Process & Design → Practical)", tag: "read", note: "★ Owned. Chs 15 + 18 (Layout + Process & Design) are especially valuable for your PM brain." },
-    { text: "WEEK 10: Read Niederst Robbins Learning Web Design Part III Chapters 11–17 (CSS: Flexbox → Grid → Responsive Design)", tag: "read", note: "★ Owned. The most current resource in your library for modern CSS layout — use as your primary CSS reference." },
-    // Week 11 — Async JS
-    { text: "WEEK 11: Async JS — callbacks, Promises, async/await, Fetch API (javascript.info Parts 11–13)", tag: "do" },
-    { text: "WEEK 11: Eloquent JavaScript Chapters 1–7 (free: eloquentjavascript.net)", tag: "read" },
-    { text: "WEEK 11: The Odin Project Full Stack JS path — start it (theodinproject.com/paths/full-stack-javascript)", tag: "do" },
-    { text: "WEEK 11: Begin building Project 3 — set up repo, create basic HTML/CSS layout", tag: "build" },
-    // Week 12 — Build & Deploy
-    { text: "WEEK 12: Complete and deploy PROJECT 3 — Full-Stack Budget & Expense Tracker", tag: "build", note: "Stack: HTML/CSS/JS (vanilla), Python Flask, PostgreSQL, Heroku/Render. Must be live." },
-    { text: "WEEK 12: Apply for fCC JavaScript Algorithms & Data Structures Certificate", tag: "cert" },
-    { text: "WEEK 12: Portfolio site — Home + About + Contact pages live on Vercel with your .com domain", tag: "build", note: "Use Next.js + Tailwind CSS. Even if basic — it must be live." },
-    { text: "WEEK 12 SUNDAY: Write blog post — 'How I Built My First Full-Stack App in 30 Days (As a Beginner)'", tag: "brand" },
-    { text: "WEEK 12 SUNDAY: Write blog post — 'Month 3 Done: 90 Days of #100DaysofCode — What Actually Worked'", tag: "brand" },
-    { text: "WEEK 12 SUNDAY: Update portfolio /projects page with Projects 1, 2, and 3", tag: "build" },
-    { text: "WEEK 12 SUNDAY: Submit sitemap.xml to Google Search Console", tag: "do", note: "Gets your pages indexed 10x faster" },
-    // Certs
-    { text: "MONTH 3 CERT: fCC Responsive Web Design Certificate (freecodecamp.org/learn/2022/responsive-web-design)", tag: "cert" },
-    { text: "MONTH 3 CERT: fCC JavaScript Algorithms & Data Structures Certificate", tag: "cert" },
-    { text: "MONTH 3 CERT: Python Essentials 2 — Cisco NetAcad (netacad.com)", tag: "cert" },
-    // Networking
-    { text: "MONTH 3 NETWORKING: Attend Startup Grind NYC (monthly, WeWork/rotating)", tag: "network", note: "startupgrind.com/chapter/new-york-city — good for freelance client leads" },
-    { text: "MONTH 3 NETWORKING: Attend BetaNYC (civic tech — perfect for government client targets)", tag: "network", note: "beta.nyc — monthly" },
-    { text: "MONTH 3 NETWORKING: Attend any NYC tech event and introduce yourself as a TPM learning to code", tag: "network" },
-  ]},
+const SETUP = [
+  { t: 'Buy your name .com domain on Namecheap (~$12/yr) — do this today', tag: 'do', note: 'namecheap.com' },
+  { t: 'Optimise LinkedIn: professional headshot, keyword-rich headline ("Technical PM → Full-Stack AI Engineer | Building at the intersection of product, AI & code"), strong About section', tag: 'brand' },
+  { t: 'Create GitHub profile README with bio, tech stack badges, and pinned repos', tag: 'brand', note: 'rahuldkjain.github.io/gh-profile-readme-generator/' },
+  { t: 'Create Hashnode account for developer blog (hashnode.com)', tag: 'brand' },
+  { t: 'Create Vercel account and connect to GitHub for auto-deploy (vercel.com)', tag: 'do' },
+  { t: 'Join freeCodeCamp Discord, The Odin Project Discord, Women Who Code NYC', tag: 'net' },
+  { t: 'Follow on X/Twitter: @swyx, @fireship_dev, @simonw, @karpathy, @leeerob, @ylecun', tag: 'brand' },
+  { t: 'Sign up on Meetup.com: NY Tech Meetup, NYC Python, NY Code + Coffee, Black Tech NYC, AI & ML NYC', tag: 'net' },
+  { t: 'Find 1 #100DaysofCode accountability partner on X/Twitter — DM them before Day 1', tag: 'net' },
+  { t: 'Set billing alerts on AWS, GCP, and Azure free tiers before using any cloud service', tag: 'do' },
 ];
 
-const PHASE2 = [
-  // ── MONTH 4 ──
-  { section: "Month 4 — React & Component Architecture", items: [
-    { text: "WEEK 13: React fundamentals — JSX, components, props, state (useState), event handling", tag: "do", note: "Use React official docs (react.dev/learn) as primary source" },
-    { text: "WEEK 13: Build 5 small React components every single day — counters, forms, lists, cards, modals", tag: "build" },
-    { text: "WEEK 13: The Odin Project React Course — start it (theodinproject.com/paths/full-stack-javascript/courses/react)", tag: "do" },
-    { text: "WEEK 14: React hooks deep dive — useEffect, useContext, useRef, useMemo, useCallback", tag: "do" },
-    { text: "WEEK 14: Set up React DevTools browser extension", tag: "do" },
-    { text: "WEEK 14: Scrimba Learn React (interactive — scrimba.com/learn/learnreact)", tag: "do" },
-    { text: "WEEK 14: Read The Pragmatic Programmer (library/Amazon) — short chapters, immediately applicable", tag: "read" },
-    { text: "WEEK 15: React Router v6, lifting state, component composition patterns, custom hooks", tag: "do" },
-    { text: "WEEK 15: fCC Front End Development Libraries Certification — start it", tag: "do", note: "freecodecamp.org/learn/front-end-development-libraries/" },
-    { text: "WEEK 16: Tailwind CSS — complete documentation walkthrough (tailwindcss.com/docs)", tag: "do" },
-    { text: "WEEK 16: shadcn/ui component library — build a UI kit for your portfolio (ui.shadcn.com)", tag: "do" },
-    { text: "WEEK 16: Complete The Odin Project React track through the Shopping Cart project", tag: "build" },
-    { text: "MONTH 4: Portfolio — add dark/light mode toggle to your site", tag: "build" },
-    { text: "MONTH 4: Portfolio — add /skills page with tech stack grid and certs earned", tag: "build" },
-    { text: "MONTH 4 SUNDAY: Write blog post — 'React Hooks Explained Like You've Used Callbacks Before'", tag: "brand" },
-    { text: "MONTH 4 SUNDAY: Write blog post — 'WCAG 2.1 for Developers: The Accessibility Checklist I Actually Use'", tag: "brand" },
-    // Networking
-    { text: "MONTH 4 NETWORKING: Attend React NYC meetup (monthly, rotating offices)", tag: "network", note: "meetup.com/react-nyc/" },
-    { text: "MONTH 4 NETWORKING: Attend Blacks in Technology NYC (monthly)", tag: "network", note: "blacksintechnology.net" },
-    { text: "MONTH 4 NETWORKING: Attend 1 Million Cups NYC (weekly Wednesday AM)", tag: "network", note: "1millioncups.com/newyorkcity — great for consulting leads" },
-  ]},
+// Phase 1, 2, 3 — each entry is a month with sections
+// Each section has a label and items [{t, tag, note?}]
+const PHASES = {
 
-  // ── MONTH 5 ──
-  { section: "Month 5 — TypeScript, Testing & UI/UX Principles", items: [
-    { text: "WEEK 17: TypeScript fundamentals — types, interfaces, generics, type guards", tag: "do", note: "TypeScript Official Handbook: typescriptlang.org/docs/handbook/intro.html" },
-    { text: "WEEK 17: Total TypeScript free tutorials — Matt Pocock (totaltypescript.com/tutorials)", tag: "do" },
-    { text: "WEEK 17: Convert one existing JS project to TypeScript", tag: "build" },
-    { text: "WEEK 18: Advanced TypeScript — utility types, discriminated unions, mapped types", tag: "do" },
-    { text: "WEEK 18: React Testing Library + Vitest — write tests for existing projects", tag: "do", note: "testing-library.com + vitest.dev" },
-    { text: "WEEK 19: UI/UX principles — Figma basics, wireframing, colour theory, typography, spacing systems", tag: "do", note: "Set up free Figma account at figma.com" },
-    { text: "WEEK 19: WCAG 2.1 accessibility standards — implement ARIA, keyboard navigation, colour contrast on all projects", tag: "do", note: "web.dev/accessibility + webaim.org" },
-    { text: "WEEK 19: Read Niederst Robbins Learning Web Design Chapter 23 (Web Image Basics) and Chapter 25 (SVG)", tag: "read", note: "★ Owned. Covers WebP, responsive images, img srcset — directly applicable to portfolio image optimisation." },
-    { text: "WEEK 19: Run Lighthouse audit on portfolio site — target 90+ on all 4 metrics", tag: "do" },
-    { text: "WEEK 19: Fix all WCAG 2.1 AA violations on your site — colour contrast, alt text, focus states", tag: "do" },
-    { text: "WEEK 20: Google UX Design Certificate — start auditing on Coursera (free audit)", tag: "cert", note: "coursera.org/professional-certificates/google-ux-design" },
-    { text: "WEEK 20: Portfolio — optimise all images with next/image, add structured data (JSON-LD)", tag: "build" },
-    { text: "MONTH 5 PAID: Buy Refactoring UI ($149 at refactoringui.com) — read it this month", tag: "paid", note: "💰 No free equivalent. Makes your portfolio look senior-built, not developer-built." },
-    { text: "MONTH 5 SUNDAY: Write blog post — 'TypeScript Is Not Optional for Production React Apps'", tag: "brand" },
-    { text: "MONTH 5 SUNDAY: Write blog post — 'How to Build a Figma Prototype in 2 Hours (Developer Edition)'", tag: "brand" },
-    // Networking
-    { text: "MONTH 5 NETWORKING: Attend Lesbians Who Tech NYC (quarterly large event)", tag: "network", note: "lesbianswhotech.org — strong ally network" },
-    { text: "MONTH 5 NETWORKING: Attend Latinas in Tech NYC (monthly)", tag: "network", note: "latinasintech.org" },
-    { text: "MONTH 5 NETWORKING: Connect with 5 Columbia CBS alumni in tech roles on LinkedIn this month", tag: "network", note: "Search: Columbia Business School + CTO/VP Engineering — 3–5x higher response rates" },
-  ]},
+// ─────────────────────────────────────────────────────────────────────
+// PHASE 1
+// ─────────────────────────────────────────────────────────────────────
+p1: [
+  {
+    month: 'Month 1', title: 'Python · Command Line · Version Control',
+    color: 'linear-gradient(90deg,#0a2a5e,#0d3a7a)',
+    sections: [
+      { label: 'Week 1 — Environment Setup + Python Basics', items: [
+        { t: 'Install: VS Code, Python 3.12, Git, WSL2 Ubuntu on Windows', tag: 'do', note: 'WSL2 guide: learn.microsoft.com/en-us/windows/wsl/install' },
+        { t: 'CS50x Week 0 (Scratch) + Week 1 (C — skim for logic, don\'t deep-dive)', tag: 'do', note: 'cs50.harvard.edu/x/' },
+        { t: 'READ: Guttag Chapters 1–4 — Getting Started → Functions & Abstraction', tag: 'read', note: '★ You own this. Read before videos — Guttag explains the why, fCC shows the how.' },
+        { t: 'Watch fCC Python 14-hr YouTube course — first 3 hours alongside Guttag', tag: 'do', note: 'youtu.be/rfscVS0vtbw' },
+        { t: 'Create GitHub profile README and first repo: "python-fundamentals"', tag: 'build' },
+        { t: 'POST: Day 1 of #100DaysofCode on X/Twitter — do it today, right now', tag: 'brand' },
+      ]},
+      { label: 'Week 2 — Data Structures, OOP & Git Workflow', items: [
+        { t: 'READ: Guttag Chapters 5–7 — Structured Types, Mutability, Modules & Files', tag: 'read', note: '★ You own this. More rigorous than Automate the Boring Stuff — read both in parallel.' },
+        { t: 'READ: Automate the Boring Stuff Chapters 1–6 (free at automatetheboringstuff.com)', tag: 'read' },
+        { t: 'CS50x Week 2 (Arrays) + Week 3 (Algorithms)', tag: 'do', note: 'cs50.harvard.edu/x/' },
+        { t: 'HackerRank Python (Easy): solve 10 problems', tag: 'do', note: 'hackerrank.com/domains/python' },
+        { t: 'Git deep dive — branching, merging, rebasing on Learn Git Branching (learngitbranching.js.org)', tag: 'do' },
+      ]},
+      { label: 'Week 3 — OOP, File I/O & Error Handling', items: [
+        { t: 'READ: Guttag Chapters 8–10 — Testing & Debugging, Exceptions, Classes & OOP', tag: 'read', note: '★ You own this. Ch 8 on debugging will save you hours every week for 18 months.' },
+        { t: 'READ: Automate the Boring Stuff Chapters 8–11 (Files, debugging, web scraping)', tag: 'read' },
+        { t: 'Real Python OOP tutorial series (realpython.com/python3-object-oriented-programming)', tag: 'do' },
+        { t: 'BUILD: Personal CLI Task Manager in Python — first mini-project', tag: 'build' },
+        { t: 'POST: LinkedIn — share your first project screenshot', tag: 'brand' },
+      ]},
+      { label: 'Week 4 — Linux CLI + Git Mastery + Month Wrap', items: [
+        { t: 'The Odin Project: Foundations — Command Line Basics (theodinproject.com)', tag: 'do' },
+        { t: 'Linux Journey: Grasshopper track (linuxjourney.com)', tag: 'do' },
+        { t: 'READ: Pro Git Book Chapters 1–3 (free at git-scm.com/book/en/v2)', tag: 'read' },
+        { t: 'CS50x Week 4 (Memory) — understand pointer concepts', tag: 'do' },
+        { t: 'Push all Weeks 1–4 code to GitHub, write proper READMEs', tag: 'build' },
+        { t: 'PUBLISH blog post: "Back to Code After 15 Years: What Month 1 Taught Me"', tag: 'brand' },
+        { t: 'PUBLISH blog post: "Why Every Technical PM Will Need to Read Code by 2027"', tag: 'brand' },
+      ]},
+      { label: 'Month 1 Certifications', items: [
+        { t: 'CERT: CS50x Certificate — complete all problem sets (free, Harvard)', tag: 'cert', note: 'cs50.harvard.edu/x/' },
+        { t: 'CERT: Git & GitHub Foundations — GitHub Skills (free, skills.github.com)', tag: 'cert' },
+        { t: 'CERT: Python Essentials 1 — Cisco NetAcad (free, netacad.com)', tag: 'cert' },
+      ]},
+      { label: 'Month 1 Networking', items: [
+        { t: 'ATTEND: TechBreakfast NYC (monthly, Midtown) — relaxed morning format, great for Month 1', tag: 'net', note: 'techbreakfast.com' },
+        { t: 'ATTEND: NY Code + Coffee (weekly Sunday AM, rotating coffee shops)', tag: 'net', note: 'meetup.com/New-York-Code-Coffee/' },
+        { t: 'ATTEND: 1 General Assembly NYC free event this month', tag: 'net', note: 'generalassemb.ly' },
+      ]},
+    ],
+  },
+  {
+    month: 'Month 2', title: 'SQL · Data Analysis · HTML/CSS Preview',
+    color: 'linear-gradient(90deg,#0a2a5e,#0d3a7a)',
+    sections: [
+      { label: 'Week 5 — SQL Fundamentals + PostgreSQL Setup', items: [
+        { t: 'SQLZoo: complete SELECT basics through SUM and COUNT sections (sqlzoo.net)', tag: 'do' },
+        { t: 'Mode Analytics SQL Tutorial: Basic and Intermediate sections (mode.com/sql-tutorial)', tag: 'do' },
+        { t: 'Install PostgreSQL locally and pgAdmin — create your first database', tag: 'do', note: 'postgresql.org/download/' },
+        { t: 'READ: Guttag Chapters 11–12 — Algorithmic Complexity and Data Structures', tag: 'read', note: '★ You own this. Big-O notation and sorting algorithms — vocabulary of technical interviews.' },
+        { t: 'BUILD: mini PostgreSQL database for personal book or podcast tracking', tag: 'build' },
+      ]},
+      { label: 'Week 6 — Advanced SQL + fCC Relational Database', items: [
+        { t: 'SQLZoo: Advanced sections — JOINs, subqueries, window functions', tag: 'do' },
+        { t: 'CS50x Week 7 (SQL) — complete all problem sets', tag: 'do', note: 'cs50.harvard.edu/x/' },
+        { t: 'fCC Relational Database Certification — SQL sections', tag: 'do', note: 'freecodecamp.org/learn/relational-database/' },
+        { t: 'Kaggle Python + Pandas courses (free, interactive — kaggle.com/learn)', tag: 'do' },
+        { t: 'Choose an NYC Open Data dataset to analyse — download and explore in pandas', tag: 'do', note: 'opendata.cityofnewyork.us' },
+      ]},
+      { label: 'Week 7 — Python Data Analysis + Duckett HTML Chapters 1–7', items: [
+        { t: 'READ: Guttag Chapter 13 — Plotting and More About Classes (matplotlib introduction)', tag: 'read', note: '★ You own this. Read before starting Kaggle Pandas — Guttag explains the foundations.' },
+        { t: 'CS50P (Python by Harvard) Weeks 0–4 (cs50.harvard.edu/python)', tag: 'do' },
+        { t: 'Analyse your NYC Open Data dataset — create 5 charts with matplotlib/seaborn', tag: 'build' },
+        { t: 'READ: Duckett HTML & CSS Chapters 1–7 — Structure through Images, do every exercise', tag: 'read', note: '★ You own this. Best visual HTML introduction ever written.' },
+        { t: 'BUILD: your first pure HTML page from scratch (no CSS yet)', tag: 'build' },
+      ]},
+      { label: 'Week 8 — HTML/CSS Preview + Build Project 2 + Month Wrap', items: [
+        { t: 'READ: Duckett HTML & CSS Chapters 8–10 — Extra Markup through CSS introduction, do exercises', tag: 'read', note: '★ You own this. Skip Ch 9 Flash content. Ch 10 box model explanation is excellent.' },
+        { t: 'fCC Responsive Web Design Certification — start it', tag: 'do', note: 'freecodecamp.org/learn/2022/responsive-web-design/' },
+        { t: 'CS50x Week 8 (HTML/CSS/JS) — complete the Trivia problem set', tag: 'do' },
+        { t: 'BUILD PROJECT 2: NYC Data Explorer Web App', tag: 'build', note: 'Stack: Python, pandas, matplotlib, SQLite, Flask, HTML/CSS. Deploy to Render.' },
+        { t: 'Push Project 2 to GitHub with README and screenshots', tag: 'build' },
+        { t: 'PUBLISH blog post: "How I Analysed NYC Open Data with Python and PostgreSQL"', tag: 'brand' },
+        { t: 'PUBLISH blog post: "The Best Free SQL Resources for Beginners (Ranked and Reviewed)"', tag: 'brand' },
+      ]},
+      { label: 'Month 2 Certifications', items: [
+        { t: 'CERT: fCC Relational Database Certificate (freecodecamp.org/learn/relational-database)', tag: 'cert' },
+        { t: 'CERT: Python Essentials 1 — complete if not done in Month 1 (netacad.com)', tag: 'cert' },
+      ]},
+      { label: 'Month 2 Networking', items: [
+        { t: 'ATTEND: NY Tech Meetup — 1st Tuesday of month, NYU Skirball Center (20K+ members)', tag: 'net', note: 'meetup.com/ny-tech-meetup/' },
+        { t: 'ATTEND: NYC Python Meetup (monthly, rotating offices)', tag: 'net', note: 'meetup.com/nycpython/' },
+        { t: 'ATTEND: Women Who Code NYC or Black Tech NYC event', tag: 'net', note: 'womenwhocode.com/network/new-york | blacktechnyc.com' },
+      ]},
+    ],
+  },
+  {
+    month: 'Month 3', title: 'JavaScript · DOM · First Full-Stack App',
+    color: 'linear-gradient(90deg,#0a2a5e,#0d3a7a)',
+    sections: [
+      { label: 'Week 9 — JavaScript Fundamentals + ES6+', items: [
+        { t: 'The Modern JavaScript Tutorial Parts 1–2 (javascript.info) — core language + browser', tag: 'do' },
+        { t: 'fCC JavaScript Algorithms & Data Structures Cert — start it', tag: 'do', note: 'freecodecamp.org/learn/javascript-algorithms-and-data-structures/' },
+        { t: 'The Odin Project Foundations JS section — excellent exercises (theodinproject.com)', tag: 'do' },
+        { t: 'READ: Duckett HTML & CSS Chapters 11–14 — Colour, Text, Boxes, CSS for Lists', tag: 'read', note: '★ You own this. Read before building Project 3 frontend.' },
+        { t: 'DOM manipulation: querySelector, addEventListener, createElement, innerHTML', tag: 'do' },
+      ]},
+      { label: 'Week 10 — ES6+ Deep Dive + Duckett Layout + Niederst Robbins CSS', items: [
+        { t: 'ES6+: arrow functions, destructuring, spread/rest, modules, template literals', tag: 'do' },
+        { t: 'BUILD: weather widget using Open-Meteo free API (open-meteo.com) — practice Fetch + async/await', tag: 'build' },
+        { t: 'READ: Duckett HTML & CSS Chapters 15–18 — Layout, Images, HTML5 Layout, Process & Design', tag: 'read', note: '★ You own this. Ch 18 Process & Design is rare: a full UX chapter inside a coding book.' },
+        { t: 'READ: Niederst Robbins Learning Web Design Chapters 11–17 — CSS text through Responsive Design', tag: 'read', note: '★ You own this. Your primary Flexbox/Grid/Responsive reference — use it throughout Phase 2.' },
+        { t: 'Complete CSS Flexbox Froggy game (flexboxfroggy.com) + CSS Grid Garden (cssgridgarden.com)', tag: 'do' },
+      ]},
+      { label: 'Week 11 — Async JS + Fetch API + Full-Stack Setup', items: [
+        { t: 'Fetch API: GET and POST requests, handling JSON, async error handling patterns', tag: 'do' },
+        { t: 'READ: Eloquent JavaScript Chapters 1–7 (free at eloquentjavascript.net)', tag: 'read' },
+        { t: 'The Odin Project Full Stack JS path — start it (theodinproject.com/paths/full-stack-javascript)', tag: 'do' },
+        { t: 'Set up Project 3 repository: Python Flask backend + vanilla JS frontend', tag: 'build' },
+        { t: 'READ: Duckett Chapter 19 — Practical Information (SEO, Analytics) — applies to your portfolio', tag: 'read', note: '★ You own this.' },
+      ]},
+      { label: 'Week 12 — Build & Deploy Project 3 + Portfolio Goes Live', items: [
+        { t: 'BUILD PROJECT 3: Full-Stack Budget & Expense Tracker', tag: 'build', note: 'Stack: HTML/CSS/JS (vanilla), Python Flask, PostgreSQL. Deploy to Render — must be live at a public URL.' },
+        { t: 'Portfolio site: launch Home + About + Contact pages at your .com on Vercel', tag: 'build', note: 'Even if basic — it must be live. Ship ugly, polish weekly.' },
+        { t: 'Apply for fCC JavaScript Algorithms & Data Structures Certificate', tag: 'cert' },
+        { t: 'Submit sitemap.xml to Google Search Console', tag: 'do', note: 'Gets pages indexed 10x faster — search.google.com/search-console' },
+        { t: 'PUBLISH blog post: "How I Built My First Full-Stack App in 30 Days"', tag: 'brand' },
+        { t: 'PUBLISH blog post: "Month 3 Done: 90 Days of #100DaysofCode — What Actually Worked"', tag: 'brand' },
+        { t: 'Update portfolio /projects page with Projects 1, 2, and 3', tag: 'build' },
+      ]},
+      { label: 'Month 3 Certifications', items: [
+        { t: 'CERT: fCC JavaScript Algorithms & Data Structures Certificate', tag: 'cert', note: 'freecodecamp.org/learn/javascript-algorithms-and-data-structures/' },
+        { t: 'CERT: fCC Responsive Web Design Certificate', tag: 'cert', note: 'freecodecamp.org/learn/2022/responsive-web-design/' },
+        { t: 'CERT: Python Essentials 2 — Cisco NetAcad (netacad.com)', tag: 'cert' },
+      ]},
+      { label: 'Month 3 Networking', items: [
+        { t: 'ATTEND: Startup Grind NYC (monthly, WeWork/rotating) — good for freelance client leads', tag: 'net', note: 'startupgrind.com/chapter/new-york-city' },
+        { t: 'ATTEND: BetaNYC — civic tech, perfect for government client targets', tag: 'net', note: 'beta.nyc — monthly' },
+        { t: 'ATTEND: 1 General Assembly NYC free event', tag: 'net' },
+      ]},
+    ],
+  },
+],
 
-  // ── MONTH 6 ──
-  { section: "Month 6 — Next.js 14, State Management & Phase 2 Projects", items: [
-    { text: "WEEK 21: Next.js 14 — App Router, Server Components, Client Components, layouts, routing", tag: "do", note: "Next.js Official Tutorial: nextjs.org/learn" },
-    { text: "WEEK 21: Lee Robinson YouTube — Next.js and Vercel best practices (youtube.com/@leerob)", tag: "do" },
-    { text: "WEEK 22: Next.js — Server Actions, data fetching patterns, SSR vs SSG vs ISR, SEO optimisation", tag: "do" },
-    { text: "WEEK 23: State management with Zustand — integrate with a real API (OpenWeather, NASA, etc.)", tag: "do", note: "zustand-demo.pmnd.rs" },
-    { text: "WEEK 23: BUILD PROJECT 4 — AI-Powered Job Board Frontend", tag: "build", note: "Stack: Next.js 14, TypeScript, Tailwind CSS, Zustand, OpenAI API. Must score 95+ on Lighthouse accessibility." },
-    { text: "WEEK 24: BUILD PROJECT 5 — Accessible E-Commerce Storefront Clone", tag: "build", note: "Stack: Next.js, TypeScript, Tailwind CSS, Stripe (test mode), PostgreSQL, Prisma. WCAG 2.1 AA certified." },
-    { text: "WEEK 24: Deploy both Project 4 and Project 5 to Vercel with live demos", tag: "build" },
-    { text: "MONTH 6: Portfolio — add /open dashboard page (transparent metrics: GitHub stars, blog views, newsletter subs)", tag: "build" },
-    { text: "MONTH 6: Portfolio — add newsletter signup form using Buttondown (free up to 100 subs)", tag: "build", note: "buttondown.email — free tier" },
-    { text: "MONTH 6: Portfolio — install Contentlayer for MDX blog (contentlayer.dev)", tag: "build" },
-    { text: "MONTH 6 CERT: fCC Front End Development Libraries Certificate", tag: "cert", note: "freecodecamp.org/learn/front-end-development-libraries/" },
-    { text: "MONTH 6: Add case studies for Projects 4 and 5 at /projects/[slug]", tag: "build" },
-    { text: "MONTH 6 SUNDAY: Write blog post — '6-Month Retrospective: What 600 Hours of Coding Looks Like as a Senior PM'", tag: "brand", note: "Most important post of Phase 2 — vulnerable, specific, honest. Gets shared broadly." },
-    { text: "MONTH 6 SUNDAY: Write blog post — 'Next.js 14 App Router: What Changed and Why It Matters'", tag: "brand" },
-    // Networking
-    { text: "MONTH 6 NETWORKING: Attend NYC Full Stack meetup (monthly)", tag: "network", note: "meetup.com/NYC-Full-Stack/" },
-    { text: "MONTH 6 NETWORKING: Attend or watch a Columbia CBS Technology & Media Club event", tag: "network", note: "gsb.columbia.edu/students/clubs/technology-media" },
-    { text: "MONTH 6 NETWORKING: Post on LinkedIn: '6 months of #100DaysofCode — here's what I built' (include screenshots of all 5 projects)", tag: "brand" },
-  ]},
+// ─────────────────────────────────────────────────────────────────────
+// PHASE 2
+// ─────────────────────────────────────────────────────────────────────
+p2: [
+  {
+    month: 'Month 4', title: 'React & Component Architecture',
+    color: 'linear-gradient(90deg,#003d36,#005c52)',
+    sections: [
+      { label: 'Week 13 — React Fundamentals (JSX, Props, State)', items: [
+        { t: 'React fundamentals: JSX, components, props, state (useState), event handling', tag: 'do', note: 'Use React official docs as primary source: react.dev/learn' },
+        { t: 'Build 5 small React components every single day this week — counters, forms, lists, cards, modals', tag: 'build' },
+        { t: 'The Odin Project React Course — start it (theodinproject.com/paths/full-stack-javascript/courses/react)', tag: 'do' },
+        { t: 'Scrimba Learn React: interactive free course (scrimba.com/learn/learnreact)', tag: 'do' },
+      ]},
+      { label: 'Week 14 — React Hooks Deep Dive', items: [
+        { t: 'React hooks: useEffect, useContext, useRef, useMemo, useCallback', tag: 'do' },
+        { t: 'Set up React DevTools browser extension — learn to inspect component trees', tag: 'do' },
+        { t: 'fCC Front End Development Libraries Certification — start it', tag: 'do', note: 'freecodecamp.org/learn/front-end-development-libraries/' },
+        { t: 'READ: The Pragmatic Programmer (library/Amazon) — start this week, short chapters', tag: 'read' },
+      ]},
+      { label: 'Week 15 — React Router + State Patterns + Custom Hooks', items: [
+        { t: 'React Router v6: NavLink, Outlet, nested routes, programmatic navigation', tag: 'do' },
+        { t: 'Lifting state, component composition patterns, custom hooks', tag: 'do' },
+        { t: 'Complete The Odin Project React track through the Shopping Cart project', tag: 'build' },
+      ]},
+      { label: 'Week 16 — Tailwind CSS + shadcn/ui + Portfolio Upgrade', items: [
+        { t: 'Tailwind CSS: complete documentation walkthrough (tailwindcss.com/docs)', tag: 'do' },
+        { t: 'shadcn/ui: build a UI kit of 8 components for your portfolio (ui.shadcn.com)', tag: 'build' },
+        { t: 'Portfolio: add dark/light mode toggle to your site', tag: 'build' },
+        { t: 'Portfolio: add /skills page with tech stack grid and certs earned so far', tag: 'build' },
+        { t: 'PUBLISH blog post: "React Hooks Explained Like You\'ve Used Callbacks Before"', tag: 'brand' },
+        { t: 'PUBLISH blog post: "WCAG 2.1 for Developers: The Accessibility Checklist I Actually Use"', tag: 'brand' },
+      ]},
+      { label: 'Month 4 Networking', items: [
+        { t: 'ATTEND: React NYC meetup (monthly, rotating offices)', tag: 'net', note: 'meetup.com/react-nyc/' },
+        { t: 'ATTEND: Blacks in Technology NYC (monthly)', tag: 'net', note: 'blacksintechnology.net' },
+        { t: 'ATTEND: 1 Million Cups NYC (weekly Wednesday AM) — good for consulting leads', tag: 'net', note: '1millioncups.com/newyorkcity' },
+      ]},
+    ],
+  },
+  {
+    month: 'Month 5', title: 'TypeScript · Testing · UI/UX Principles',
+    color: 'linear-gradient(90deg,#003d36,#005c52)',
+    sections: [
+      { label: 'Week 17 — TypeScript Fundamentals', items: [
+        { t: 'TypeScript Official Handbook: types, interfaces, generics, type guards (typescriptlang.org/docs/handbook)', tag: 'do' },
+        { t: 'Total TypeScript free tier: complete "Beginner TypeScript" tutorial (totaltypescript.com/tutorials)', tag: 'do' },
+        { t: 'Convert Project 3 (Budget Tracker) from JavaScript to TypeScript', tag: 'build' },
+        { t: 'READ: Refactoring UI — first 3 chapters (colour systems, spacing, typography)', tag: 'read', note: '💰 $149 at refactoringui.com — buy it this week if you haven\'t. No free equivalent.' },
+      ]},
+      { label: 'Week 18 — Advanced TypeScript + Testing', items: [
+        { t: 'Advanced TypeScript: utility types (Partial, Pick, Omit), discriminated unions, mapped types', tag: 'do' },
+        { t: 'React Testing Library: write 5 tests for your existing React components', tag: 'do', note: 'testing-library.com/docs/react-testing-library/intro/' },
+        { t: 'Vitest setup — replace any Jest config with Vitest in your projects (vitest.dev)', tag: 'do' },
+        { t: 'Read Refactoring UI chapters on layout and component spacing', tag: 'read' },
+        { t: 'Convert Project 4 (Job Board) to TypeScript — all props fully typed', tag: 'build' },
+      ]},
+      { label: 'Week 19 — UI/UX Principles + Figma + Accessibility', items: [
+        { t: 'Figma: complete the official "Figma for Beginners" 4-part tutorial (figma.com/resources/learn-design)', tag: 'do' },
+        { t: 'Wireframe your portfolio redesign in Figma — home, projects, blog layouts', tag: 'build' },
+        { t: 'WCAG 2.1 audit: run all 5 existing projects through axe DevTools Chrome extension', tag: 'do', note: 'deque.com/axe/devtools/ — free Chrome extension' },
+        { t: 'Fix every WCAG AA violation found: colour contrast, ARIA labels, keyboard navigation', tag: 'do' },
+        { t: 'READ: Niederst Robbins Chapter 23 (Web Image Basics) — implement srcset and WebP on portfolio', tag: 'read', note: '★ You own this.' },
+        { t: 'Google UX Design Certificate: start auditing on Coursera — complete Module 1', tag: 'do', note: 'coursera.org/professional-certificates/google-ux-design — audit free' },
+      ]},
+      { label: 'Week 20 — Lighthouse Audit + Structured Data + Portfolio Optimisation', items: [
+        { t: 'Run Lighthouse audit on portfolio site — target 90+ on all four metrics', tag: 'do' },
+        { t: 'Add structured data (JSON-LD) to all blog posts for Google rich snippets', tag: 'do' },
+        { t: 'Optimise all portfolio images with next/image — lazy loading, WebP format, blur placeholder', tag: 'do' },
+        { t: 'PUBLISH blog post: "TypeScript Is Not Optional for Production React Apps"', tag: 'brand' },
+        { t: 'PUBLISH blog post: "How to Build a Figma Prototype in 2 Hours (Developer Edition)"', tag: 'brand' },
+      ]},
+      { label: 'Month 5 Certifications', items: [
+        { t: 'CERT: Google UX Design Certificate — start auditing (free, coursera.org)', tag: 'cert' },
+        { t: 'BUY: Refactoring UI ($149 at refactoringui.com) if not yet purchased', tag: 'paid', note: '💰 No free equivalent. Single biggest investment in your portfolio aesthetics.' },
+      ]},
+      { label: 'Month 5 Networking', items: [
+        { t: 'ATTEND: Lesbians Who Tech NYC (quarterly large event)', tag: 'net', note: 'lesbianswhotech.org' },
+        { t: 'ATTEND: Latinas in Tech NYC (monthly)', tag: 'net', note: 'latinasintech.org' },
+        { t: 'CONNECT: Reach out to 5 Columbia CBS alumni in CTO/VP Engineering roles on LinkedIn', tag: 'net', note: 'Search: Columbia Business School + CTO — 3–5x higher response rates' },
+      ]},
+    ],
+  },
+  {
+    month: 'Month 6', title: 'Next.js 14 · State Management · Phase 2 Projects',
+    color: 'linear-gradient(90deg,#003d36,#005c52)',
+    sections: [
+      { label: 'Week 21 — Next.js 14 App Router Core', items: [
+        { t: 'Next.js Official Tutorial — complete all sections (nextjs.org/learn)', tag: 'do' },
+        { t: 'App Router: layouts, pages, loading states, error boundaries, metadata API', tag: 'do' },
+        { t: 'Server Components vs Client Components — understand the mental model deeply', tag: 'do' },
+        { t: 'Lee Robinson YouTube: watch "Next.js App Router" series (youtube.com/@leerob)', tag: 'do' },
+      ]},
+      { label: 'Week 22 — Next.js Advanced: Server Actions + Data Fetching', items: [
+        { t: 'Server Actions: forms without API routes, data mutations, optimistic updates', tag: 'do', note: 'nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations' },
+        { t: 'Data fetching patterns: SSR, SSG, ISR, Streaming — when to use each', tag: 'do' },
+        { t: 'SEO in Next.js: metadata API, Open Graph images, structured data', tag: 'do' },
+        { t: 'Vercel deployment: environment variables, preview deployments, edge config', tag: 'do' },
+      ]},
+      { label: 'Week 23 — State Management + Real API Integration', items: [
+        { t: 'Zustand: setup, slices, devtools, persist middleware — build a real store (zustand-demo.pmnd.rs)', tag: 'do' },
+        { t: 'Connect Project 4 (Job Board) to a live jobs API: GitHub Jobs, Adzuna, or Remotive', tag: 'build' },
+        { t: 'SWR or React Query: data fetching + caching patterns for client components', tag: 'do' },
+        { t: 'Portfolio: add /open dashboard page — transparent metrics powered by real data', tag: 'build' },
+      ]},
+      { label: 'Week 24 — Build & Deploy Projects 4 & 5 + Phase 2 Wrap', items: [
+        { t: 'BUILD PROJECT 4: AI-Powered Job Board Frontend — final polish, Lighthouse 95+ accessibility', tag: 'build', note: 'Stack: Next.js 14, TypeScript, Tailwind CSS, Zustand, OpenAI API. Deploy to Vercel.' },
+        { t: 'BUILD PROJECT 5: Accessible E-Commerce Storefront Clone', tag: 'build', note: 'Stack: Next.js, TypeScript, Tailwind, Stripe test mode, PostgreSQL, Prisma. Deploy to Vercel.' },
+        { t: 'Write full case studies for Projects 4 and 5 at /projects/[slug]', tag: 'build' },
+        { t: 'Portfolio: add newsletter signup form using Buttondown (free, buttondown.email)', tag: 'build' },
+        { t: 'Portfolio: install Contentlayer for MDX blog (contentlayer.dev)', tag: 'build' },
+        { t: 'Apply for fCC Front End Development Libraries Certificate', tag: 'cert', note: 'freecodecamp.org/learn/front-end-development-libraries/' },
+        { t: 'PUBLISH blog post: "6-Month Retrospective: What 600 Hours of Coding Looks Like as a Senior PM"', tag: 'brand', note: 'Most shared post type in the developer community. Write it with care.' },
+        { t: 'PUBLISH blog post: "Next.js 14 App Router: What Changed and Why It Matters"', tag: 'brand' },
+      ]},
+      { label: 'Month 6 Certifications', items: [
+        { t: 'CERT: fCC Front End Development Libraries Certificate', tag: 'cert', note: 'freecodecamp.org/learn/front-end-development-libraries/' },
+      ]},
+      { label: 'Month 6 Networking', items: [
+        { t: 'ATTEND: NYC Full Stack meetup (monthly)', tag: 'net', note: 'meetup.com/NYC-Full-Stack/' },
+        { t: 'ATTEND: Columbia CBS Technology & Media Club event (alumni network)', tag: 'net', note: 'gsb.columbia.edu/students/clubs/technology-media' },
+        { t: 'POST: LinkedIn — "6 months of #100DaysofCode — here\'s what I built" (with screenshots of all 5 projects)', tag: 'brand' },
+      ]},
+    ],
+  },
+],
+
+// ─────────────────────────────────────────────────────────────────────
+// PHASE 3
+// ─────────────────────────────────────────────────────────────────────
+p3: [
+  {
+    month: 'Month 7', title: 'Node.js · Express · REST API Design',
+    color: 'linear-gradient(90deg,#1e0f4a,#2d1b69)',
+    sections: [
+      { label: 'Week 25 — Node.js Core + npm Ecosystem', items: [
+        { t: 'Node.js fundamentals: event loop, non-blocking I/O, Buffer, streams, EventEmitter', tag: 'do', note: 'The Odin Project NodeJS: theodinproject.com/paths/full-stack-javascript/courses/nodejs' },
+        { t: 'The Odin Project NodeJS Course — complete the Introduction section', tag: 'do' },
+        { t: 'npm ecosystem: package.json scripts, versioning, npx, workspaces', tag: 'do' },
+        { t: 'fCC Back End Development & APIs Cert — start the npm and Node modules sections', tag: 'do', note: 'freecodecamp.org/learn/back-end-development-and-apis/' },
+        { t: 'BUILD: Node.js CLI tool that reads and transforms file data — no frameworks yet', tag: 'build' },
+      ]},
+      { label: 'Week 26 — Express.js + REST API Design + Prisma ORM', items: [
+        { t: 'Express.js: routing, middleware chain, error handling, express.Router()', tag: 'do', note: 'expressjs.com/en/guide/routing.html' },
+        { t: 'REST API design: resource naming, HTTP verbs, status codes, versioning, pagination', tag: 'do' },
+        { t: 'Prisma ORM: schema.prisma, migrations, model relations, Prisma Studio (prisma.io/docs)', tag: 'do' },
+        { t: 'Set up Postman with environments for local and deployed API testing (postman.com)', tag: 'do' },
+        { t: 'BUILD: simple CRUD API for a to-do list — Express + Prisma + PostgreSQL', tag: 'build' },
+      ]},
+      { label: 'Week 27 — Authentication: JWT, bcrypt, OAuth2', items: [
+        { t: 'bcrypt: password hashing, salt rounds, timing-safe comparison', tag: 'do', note: 'jwt.io for interactive JWT decoder' },
+        { t: 'JWT: signing, verification, refresh token rotation, secure storage', tag: 'do' },
+        { t: 'Implement full auth flow: register, login, protected routes, refresh tokens', tag: 'build' },
+        { t: 'OAuth2 concepts: authorization code flow, PKCE — integrate GitHub OAuth in a demo app', tag: 'do' },
+        { t: 'READ: Clean Code by Robert Martin (library/Amazon) — start this week, read alongside building', tag: 'read' },
+      ]},
+      { label: 'Week 28 — Redis Caching + Build & Deploy Project 6', items: [
+        { t: 'Redis: data types, TTL, caching patterns, rate limiting, pub/sub basics', tag: 'do' },
+        { t: 'Redis University FREE course: RU101 Introduction to Redis Data Structures (university.redis.com)', tag: 'do' },
+        { t: 'BUILD PROJECT 6: Developer Community REST API', tag: 'build', note: 'Stack: Node.js, Express, PostgreSQL, Prisma, JWT auth, Redis caching, Docker. Must include Swagger/OpenAPI docs at /api-docs.' },
+        { t: 'Deploy Project 6 to Railway or Render (railway.app)', tag: 'build' },
+        { t: 'Apply for fCC Back End Development & APIs Certificate', tag: 'cert' },
+        { t: 'PUBLISH blog post: "Building a Production REST API with Node.js, Express and Prisma"', tag: 'brand' },
+        { t: 'PUBLISH blog post: "FastAPI vs Django vs Flask: Why I Chose FastAPI for AI Projects"', tag: 'brand' },
+      ]},
+      { label: 'Month 7 Certifications', items: [
+        { t: 'CERT: fCC Back End Development & APIs Certificate', tag: 'cert', note: 'freecodecamp.org/learn/back-end-development-and-apis/' },
+        { t: 'CERT: Redis University RU101 completion badge (free, university.redis.com)', tag: 'cert' },
+      ]},
+      { label: 'Month 7 Networking', items: [
+        { t: 'ATTEND: NYC Node.js Meetup (monthly)', tag: 'net', note: 'meetup.com/nyc-nodejs/' },
+        { t: 'ATTEND: AI & ML NYC meetup — start attending from Month 7 onward (2×/month)', tag: 'net', note: 'meetup.com/AI-ML-NYC/' },
+        { t: 'OSS: Make your first open source comment or issue on GitHub — Explorer level', tag: 'do', note: 'goodfirstissue.dev — find a friendly repo to engage with' },
+      ]},
+    ],
+  },
+  {
+    month: 'Month 8', title: 'Python FastAPI · GraphQL · Advanced PostgreSQL · Docker',
+    color: 'linear-gradient(90deg,#1e0f4a,#2d1b69)',
+    sections: [
+      { label: 'Week 29 — FastAPI Fundamentals + Pydantic', items: [
+        { t: 'FastAPI Official Tutorial — complete from "First Steps" through "Security" section', tag: 'do', note: 'fastapi.tiangolo.com/tutorial/ — best framework docs in the Python ecosystem' },
+        { t: 'Pydantic v2: models, validators, field types, custom serialisation (docs.pydantic.dev)', tag: 'do' },
+        { t: 'FastAPI: path operations, query params, request bodies, dependency injection', tag: 'do' },
+        { t: 'Watch fCC FastAPI Full Course YouTube as visual companion (youtu.be/0sOvCWFmrtA)', tag: 'do' },
+        { t: 'Rebuild your Project 3 backend endpoint in FastAPI — compare the two approaches', tag: 'build' },
+      ]},
+      { label: 'Week 30 — FastAPI Advanced: Async + WebSockets + Background Tasks', items: [
+        { t: 'Async FastAPI: async def endpoints, async SQLAlchemy, asyncpg', tag: 'do' },
+        { t: 'WebSockets in FastAPI: connection manager pattern, broadcasting messages', tag: 'do', note: 'fastapi.tiangolo.com/advanced/websockets/' },
+        { t: 'Background tasks: FastAPI BackgroundTasks vs Celery for longer jobs', tag: 'do' },
+        { t: 'File uploads: multipart form data, image processing with Pillow', tag: 'do' },
+        { t: 'Middleware: CORS, rate limiting, request logging, custom error handlers', tag: 'do' },
+      ]},
+      { label: 'Week 31 — GraphQL with Strawberry + Advanced PostgreSQL + pgvector', items: [
+        { t: 'Strawberry GraphQL: Python-type schema, queries, mutations, subscriptions (strawberry.rocks)', tag: 'do' },
+        { t: 'Apollo Client: connecting React frontend to a GraphQL API (apollographql.com/docs/react)', tag: 'do' },
+        { t: 'Advanced PostgreSQL: EXPLAIN ANALYZE, query plans, composite indexes, JSONB operators', tag: 'do' },
+        { t: 'READ: Use The Index, Luke! — "Index Basics" and "Where Clause" chapters (use-the-index-luke.com — free)', tag: 'read' },
+        { t: 'pgvector: install extension, create vector columns, run similarity search queries', tag: 'do', note: 'github.com/pgvector/pgvector — essential for Phase 4 AI projects' },
+      ]},
+      { label: 'Week 32 — Docker + Build & Deploy Project 7', items: [
+        { t: 'Docker fundamentals: images, containers, Dockerfile best practices, multi-stage builds', tag: 'do', note: 'fCC Docker Course YouTube: youtu.be/9zUHg7xjIqQ' },
+        { t: 'docker-compose: run app + postgres + redis together in one compose file', tag: 'do', note: 'docs.docker.com/compose/reference/' },
+        { t: 'BUILD PROJECT 7: Real-Time Collaboration API', tag: 'build', note: 'Stack: Python, FastAPI, PostgreSQL, WebSockets, Redis Pub/Sub, Docker, Pydantic. Docker-containerised.' },
+        { t: 'Make first open source bug fix or docs PR — target freeCodeCamp or FastAPI', tag: 'build', note: 'First merged PR is a major milestone. github.com/freeCodeCamp/freeCodeCamp' },
+        { t: 'PUBLISH blog post: "My First Open Source PR: A Step-by-Step Walkthrough for Beginners"', tag: 'brand' },
+        { t: 'PUBLISH blog post: "Docker for Developers: The Only Guide You Actually Need"', tag: 'brand' },
+      ]},
+      { label: 'Month 8 Networking', items: [
+        { t: 'ATTEND: NYC Machine Learning & Data Science meetup (monthly)', tag: 'net', note: 'meetup.com/NYC-Machine-Learning/' },
+        { t: 'ATTEND: NYC DevOps & Cloud meetup (monthly)', tag: 'net', note: 'meetup.com/NYC-DevOps/' },
+        { t: 'SUBMIT: CFP to NYC Python Meetup for a 5–10 minute lightning talk on FastAPI', tag: 'net', note: 'Your first speaking opportunity — small, low-pressure, perfect timing' },
+      ]},
+    ],
+  },
+  {
+    month: 'Month 9', title: 'Microservices · CI/CD · System Design',
+    color: 'linear-gradient(90deg,#1e0f4a,#2d1b69)',
+    sections: [
+      { label: 'Week 33 — Microservices + Message Queues + Guttag AI Prep', items: [
+        { t: 'Microservices concepts: service decomposition, API gateways, service mesh basics', tag: 'do' },
+        { t: 'RabbitMQ: exchanges, queues, routing keys — run locally via Docker (rabbitmq.com/tutorials)', tag: 'do' },
+        { t: 'READ: Guttag Chapters 14–18 — Optimization, Dynamic Programming, Monte Carlo Simulation', tag: 'read', note: '★ You own this. These chapters build the mathematical intuition that makes LLM concepts click in Phase 4.' },
+        { t: 'BUY: Designing Data-Intensive Applications by Martin Kleppmann (~$60, dataintensive.net)', tag: 'paid', note: '💰 The system design bible. Read Chapters 1–3 this week.' },
+        { t: 'ByteByteGo YouTube: watch the "System Design Fundamentals" playlist — minimum 6 videos', tag: 'do', note: 'youtube.com/@ByteByteGo' },
+      ]},
+      { label: 'Week 34 — CI/CD with GitHub Actions + Grokking System Design', items: [
+        { t: 'GitHub Actions: workflow syntax, jobs, steps, secrets, matrix builds (docs.github.com/en/actions)', tag: 'do' },
+        { t: 'Build CI pipeline: lint → test → build → deploy on every push to main', tag: 'build' },
+        { t: 'BUY: Grokking the System Design Interview (Educative, ~$79/yr — designgurus.io)', tag: 'paid', note: '💰 Structured, interactive, interview-ready. Complete CAP theorem, consistent hashing, load balancing sections.' },
+        { t: 'System Design Primer: read "Scalability" and "Databases" sections (github.com/donnemartin/system-design-primer)', tag: 'read' },
+        { t: 'Add CI/CD to all 8 existing projects — even basic lint + test counts', tag: 'build' },
+      ]},
+      { label: 'Week 35 — System Design Deep Dive + Architecture Patterns', items: [
+        { t: 'Caching strategies: cache-aside, write-through, write-behind, TTL tuning', tag: 'do' },
+        { t: 'Database scaling: read replicas, connection pooling (pgBouncer), sharding concepts', tag: 'do' },
+        { t: 'CDN and edge computing: when to use, Vercel Edge Functions basics', tag: 'do' },
+        { t: 'Design two systems on paper: URL shortener + Twitter feed — draw architecture diagrams', tag: 'build' },
+        { t: 'READ: Designing Data-Intensive Applications Chapters 4–6 (encoding, replication, partitioning)', tag: 'read' },
+      ]},
+      { label: 'Week 36 — Build Project 8 + Exam Bookings + Phase 3 Wrap', items: [
+        { t: 'BUILD PROJECT 8: Full-Stack SaaS Starter Kit', tag: 'build', note: 'Stack: Next.js 14, FastAPI, PostgreSQL, Stripe, Docker, GitHub Actions, Vercel. Open-source with "Use this template" button.' },
+        { t: 'Deploy Project 8 to GitHub as an open-source template — write detailed README and CONTRIBUTING.md', tag: 'build' },
+        { t: 'BOOK: AWS Cloud Practitioner exam at examregistration.aws.training (~$100)', tag: 'cert', note: 'Take it in Month 12 — book now to commit.' },
+        { t: 'START: Google AI Professional Certificate 7-day free trial on Coursera — earn it Week 37', tag: 'cert', note: '⭐ NEW CERT — coursera.org/professional-certificates/google-ai — ~$49, completable in one weekend' },
+        { t: 'SUBMIT: CFP to NYC Tech Week (nyctechweek.xyz) — talk: "From PM to AI Engineer"', tag: 'net', note: 'CFP typically March–April. Submit this month.' },
+        { t: 'PUBLISH blog post: "9-Month Retrospective: From PM to Engineer — The Inflection Point"', tag: 'brand' },
+        { t: 'PUBLISH blog post: "System Design for Product Managers: What I Wish I Knew Sooner"', tag: 'brand' },
+      ]},
+      { label: 'Month 9 Certifications', items: [
+        { t: 'CERT: Book AWS Cloud Practitioner exam — take it in Month 12', tag: 'cert' },
+        { t: 'CERT: Start Google AI Professional Certificate trial — earn it in Week 37 (first week of Phase 4)', tag: 'cert', note: '⭐ NEW — coursera.org/professional-certificates/google-ai' },
+      ]},
+      { label: 'Month 9 Networking', items: [
+        { t: 'ATTEND: NYC GraphQL meetup (bi-monthly)', tag: 'net', note: 'meetup.com/NYC-GraphQL/' },
+        { t: 'ATTEND: TechDay NYC event or planning meetup (annual May)', tag: 'net', note: 'techdayhq.com' },
+        { t: 'REGISTER: for at least 1 hackathon — MLH NYC or Devpost (mlh.io/events or devpost.com)', tag: 'net' },
+      ]},
+    ],
+  },
+],
+};
+
+// ─────────────────────────────────────────────────────────────────────
+// LOOK-AHEAD CERTS
+// ─────────────────────────────────────────────────────────────────────
+const LOOKAHEAD = [
+  { t: 'MONTH 10 — Earn: Google AI Professional Certificate (~$49, one weekend, coursera.org/professional-certificates/google-ai)', tag: 'cert', note: '⭐ NEW — Validated by major employers. 20+ hands-on AI work scenarios. Earn it in Week 37, the very first week of Phase 4.' },
+  { t: 'MONTH 12 — Earn: Google Cloud Generative AI Leader Certification ($99 exam, 90 min, cloud.google.com/learn/certification/generative-ai-leader)', tag: 'cert', note: '⭐ NEW — Designed for leaders and executives, not just engineers. Prep FREE via cloudskillsboost.google. This separates CTO candidates from VP Engineering candidates.' },
+  { t: 'MONTH 16 — Earn: Claude Certified Architect, Foundations CCA-F ($99 exam, 120 min, anthropic.com)', tag: 'cert', note: '🥇 HIGHEST PRIORITY — Anthropic\'s first official technical cert, launched March 2026. Agentic architecture, Claude Code, MCP, prompt engineering, context management. Prep entirely FREE via Anthropic Academy. Accenture is training 30,000 professionals on this — be an early credentialed holder.' },
 ];
 
-const PHASE3 = [
-  // ── MONTH 7 ──
-  { section: "Month 7 — Node.js, Express & REST API Design", items: [
-    { text: "WEEK 25: Node.js fundamentals — event loop, modules, npm ecosystem, file system, streams", tag: "do", note: "The Odin Project NodeJS Course: theodinproject.com/paths/full-stack-javascript/courses/nodejs" },
-    { text: "WEEK 25: Express.js — routing, middleware, error handling (expressjs.com/en/guide/routing.html)", tag: "do" },
-    { text: "WEEK 25: fCC Back End Development & APIs Cert — start it (freecodecamp.org/learn/back-end-development-and-apis)", tag: "do" },
-    { text: "WEEK 26: Prisma ORM + PostgreSQL — schema design, migrations, relations, queries (prisma.io/docs)", tag: "do" },
-    { text: "WEEK 26: REST API design — resource naming, HTTP methods, status codes, pagination", tag: "do" },
-    { text: "WEEK 26: Set up Postman for API testing (postman.com)", tag: "do" },
-    { text: "WEEK 26: Read Clean Code by Robert Martin (library/Amazon) — read while building Project 6", tag: "read" },
-    { text: "WEEK 27: Authentication deep dive — bcrypt, JWT, refresh tokens, OAuth2 basics", tag: "do" },
-    { text: "WEEK 27: Redis basics — caching patterns (university.redis.com free courses)", tag: "do" },
-    { text: "WEEK 28: BUILD PROJECT 6 — Developer Community REST API", tag: "build", note: "Stack: Node.js, Express, PostgreSQL, Prisma, JWT auth, Redis caching, Docker. Must include Swagger docs." },
-    { text: "WEEK 28: Deploy Project 6 to Railway or Render", tag: "build" },
-    { text: "WEEK 28: fCC Back End Development & APIs Certificate — complete and apply for it", tag: "cert" },
-    { text: "MONTH 7 SUNDAY: Write blog post — 'Building a Production REST API with Node.js, Express and Prisma'", tag: "brand" },
-    { text: "MONTH 7 SUNDAY: Write blog post — 'FastAPI vs Django vs Flask: Why I Chose FastAPI for AI Projects'", tag: "brand" },
-    // Networking
-    { text: "MONTH 7 NETWORKING: Attend NYC Node.js Meetup (monthly)", tag: "network", note: "meetup.com/nyc-nodejs/" },
-    { text: "MONTH 7 NETWORKING: Attend AI & ML NYC meetup (2x/month — begin attending from Month 7)", tag: "network", note: "meetup.com/AI-ML-NYC/" },
-    { text: "MONTH 7 NETWORKING: Make your first open source comment or issue on GitHub (Explorer level)", tag: "do", note: "goodfirstissue.dev — find a friendly repo to engage with" },
-  ]},
+// ═══════════════════════════════════════════════════════════════════════
+// RENDER ENGINE
+// ═══════════════════════════════════════════════════════════════════════
 
-  // ── MONTH 8 ──
-  { section: "Month 8 — Python FastAPI, GraphQL & Advanced PostgreSQL", items: [
-    { text: "WEEK 29: FastAPI fundamentals — path operations, Pydantic models, dependency injection, OpenAPI", tag: "do", note: "FastAPI Tutorial: fastapi.tiangolo.com/tutorial/ — best framework docs in Python" },
-    { text: "WEEK 29: fCC FastAPI Full Course YouTube (youtu.be/0sOvCWFmrtA)", tag: "do" },
-    { text: "WEEK 30: FastAPI advanced — async operations, background tasks, WebSockets, file uploads", tag: "do" },
-    { text: "WEEK 31: GraphQL — schema design, resolvers, mutations with Strawberry (strawberry.rocks)", tag: "do" },
-    { text: "WEEK 31: Advanced PostgreSQL — query optimisation, EXPLAIN ANALYZE, indexes, full-text search, JSONB", tag: "do", note: "Use The Index, Luke: use-the-index-luke.com" },
-    { text: "WEEK 31: pgvector — vector extension for PostgreSQL (github.com/pgvector/pgvector)", tag: "do", note: "Essential for AI search projects in Phase 4" },
-    { text: "WEEK 32: Docker fundamentals — Dockerfile, docker-compose, containerise your apps (youtu.be/9zUHg7xjIqQ fCC)", tag: "do" },
-    { text: "WEEK 32: BUILD PROJECT 7 — Real-Time Collaboration API with WebSockets", tag: "build", note: "Stack: Python, FastAPI, PostgreSQL, WebSockets, Redis Pub/Sub, Docker, Pydantic" },
-    { text: "WEEK 32: Make first open source bug fix or doc PR — target freeCodeCamp or The Odin Project", tag: "build", note: "github.com/freeCodeCamp/freeCodeCamp or github.com/TheOdinProject/curriculum" },
-    { text: "MONTH 8 SUNDAY: Write blog post — 'My First Open Source PR: A Step-by-Step Walkthrough for Beginners'", tag: "brand" },
-    { text: "MONTH 8 SUNDAY: Write blog post — 'Docker for Developers: The Only Guide You Actually Need'", tag: "brand" },
-    // Networking
-    { text: "MONTH 8 NETWORKING: Attend NYC Machine Learning & Data Science meetup (monthly)", tag: "network", note: "meetup.com/NYC-Machine-Learning/ — most technical AI meetup in NYC" },
-    { text: "MONTH 8 NETWORKING: Attend NYC DevOps & Cloud meetup (monthly)", tag: "network", note: "meetup.com/NYC-DevOps/" },
-    { text: "MONTH 8 NETWORKING: Submit a CFP (talk proposal) to NYC Python Meetup for a lightning talk on FastAPI", tag: "network", note: "5–10 minute talk. Your first speaking opportunity." },
-  ]},
+let allItems = [];   // { id, el, phase, checked }
 
-  // ── MONTH 9 ──
-  { section: "Month 9 — Microservices, CI/CD & System Design", items: [
-    { text: "WEEK 33: Microservices concepts, API gateways, service communication, message queues (RabbitMQ/Redis)", tag: "do" },
-    { text: "WEEK 33: Read Guttag Chapters 14–18 (Knapsack & Graph Problems → Dynamic Programming → Monte Carlo Simulation)", tag: "read", note: "★ Owned. Read at end of Phase 3 to build mathematical intuition for Phase 4 AI modules." },
-    { text: "WEEK 33: PAID: Buy Designing Data-Intensive Applications by Martin Kleppmann (~$60, dataintensive.net)", tag: "paid", note: "💰 The system design bible. Required reading for CTO-track roles. Start reading Chs 1–3." },
-    { text: "WEEK 34: GitHub Actions CI/CD — build pipelines, automated testing, deployment workflows (docs.github.com/en/actions)", tag: "do" },
-    { text: "WEEK 34: PAID: Grokking the System Design Interview (Educative, ~$79/yr — designgurus.io)", tag: "paid", note: "💰 Interactive, interview-ready. Free GitHub version is incomplete." },
-    { text: "WEEK 34: System Design Primer — read 50% of it (github.com/donnemartin/system-design-primer)", tag: "read" },
-    { text: "WEEK 34: ByteByteGo YouTube — watch 6 system design videos (youtube.com/@ByteByteGo)", tag: "do" },
-    { text: "WEEK 35: System design deep dive — caching, load balancing, CDN, database sharding", tag: "do" },
-    { text: "WEEK 35: Set up CI/CD pipeline with GitHub Actions for ALL previous projects", tag: "build" },
-    { text: "WEEK 36: BUILD PROJECT 8 — Full-Stack SaaS Starter Kit", tag: "build", note: "Stack: Next.js 14, FastAPI, PostgreSQL, Stripe, Docker, GitHub Actions, Vercel. Open-source it." },
-    { text: "WEEK 36: Deploy Project 8 to GitHub as 'Use this template' open source project", tag: "build" },
-    { text: "WEEK 36: Book AWS Cloud Practitioner exam (examregistration.aws.training)", tag: "cert", note: "~$100 exam fee. Take it in Month 12." },
-    { text: "MONTH 9 SUNDAY: Write blog post — '9-Month Retrospective: From PM to Engineer — The Inflection Point'", tag: "brand" },
-    { text: "MONTH 9 SUNDAY: Write blog post — 'System Design for Product Managers: What I Wish I Knew Sooner'", tag: "brand" },
-    { text: "MONTH 9: Submit CFP for NYC Tech Week (annual June festival — nyctechweek.xyz)", tag: "network", note: "CFP typically March–April. Submit this month. Talk: 'From PM to AI Engineer' origin story." },
-    // Networking
-    { text: "MONTH 9 NETWORKING: Attend NYC GraphQL meetup (bi-monthly)", tag: "network", note: "meetup.com/NYC-GraphQL/" },
-    { text: "MONTH 9 NETWORKING: Attend TechDay NYC planning or preview event (annual May)", tag: "network", note: "techdayhq.com" },
-    { text: "MONTH 9 NETWORKING: Register for at least 1 hackathon — MLH NYC or Devpost (mlh.io/events or devpost.com)", tag: "network" },
-  ]},
-];
+const tagClass = { do:'t-do', read:'t-read', build:'t-build', brand:'t-brand', cert:'t-cert', net:'t-net', paid:'t-paid' };
+const tagLabel = { do:'DO', read:'READ', build:'BUILD', brand:'BRAND', cert:'CERT', net:'NETWORK', paid:'BUY' };
 
-// ─── RENDER ──────────────────────────────────────────────────────────────────
-let allItems = [];
-let itemPhase = {};
+function loadState() {
+  try { return JSON.parse(localStorage.getItem('cl123_v2') || '{}'); } catch(e) { return {}; }
+}
+function saveState() {
+  const s = {};
+  allItems.forEach(x => { if (x.checked) s[x.id] = 1; });
+  try { localStorage.setItem('cl123_v2', JSON.stringify(s)); } catch(e) {}
+}
 
-function makeItem(text, tag, note, id) {
-  const isDone = loadState(id);
+function makeItem(id, text, tag, note, phase) {
+  const state = loadState();
+  const checked = !!state[id];
   const el = document.createElement('div');
-  el.className = 'item' + (isDone ? ' done' : '');
-  el.dataset.id = id;
-  el.dataset.tag = tag;
-  el.innerHTML = `
-    <div class="checkbox"></div>
-    <div class="item-inner">
-      <div class="item-text">${text}</div>
-      ${note ? `<div class="item-note">${note}</div>` : ''}
-    </div>
-    <span class="tag ${tag}">${tagLabel(tag)}</span>`;
-  el.addEventListener('click', () => toggleItem(el, id));
+  el.className = 'item' + (checked ? ' done' : '');
+  el.innerHTML = `<div class="cb"></div><div class="item-inner"><div class="item-text">${text}</div>${note ? `<div class="item-note">${note}</div>` : ''}</div><span class="tag ${tagClass[tag] || 't-do'}">${tagLabel[tag] || tag}</span>`;
+  el.addEventListener('click', () => {
+    const rec = allItems.find(x => x.id === id);
+    if (!rec) return;
+    rec.checked = !rec.checked;
+    el.classList.toggle('done', rec.checked);
+    saveState();
+    updateProgress();
+  });
+  const rec = { id, el, phase, checked };
+  allItems.push(rec);
   return el;
 }
 
-function tagLabel(t) {
-  const map = { read:'READ', do:'DO', build:'BUILD', brand:'BRAND', cert:'CERT', network:'NETWORK', weekly:'WEEKLY', paid:'BUY', own:'OWNED' };
-  return map[t] || t.toUpperCase();
-}
-
-function renderGroup(containerId, groups, phase) {
-  const container = document.getElementById(containerId);
-  groups.forEach(group => {
-    const monthBlock = document.createElement('div');
-    monthBlock.className = 'month-block';
-
-    const hdr = document.createElement('div');
-    hdr.className = 'month-header';
-    hdr.style.background = phase === 1 ? 'linear-gradient(90deg,#0a2a5e,#0d3a7a)' :
-                            phase === 2 ? 'linear-gradient(90deg,#003d36,#005c52)' :
-                                          'linear-gradient(90deg,#1e0f4a,#2d1b69)';
-    hdr.innerHTML = `<span>${group.section}</span><span class="month-count" id="mc-${containerId}-${group.section.replace(/\s/g,'_')}"></span>`;
-    monthBlock.appendChild(hdr);
-
-    const sectionWrap = document.createElement('div');
-    sectionWrap.className = 'items-wrap';
-
-    // group items by sub-section (week vs cert vs networking etc)
-    const subSections = {};
-    group.items.forEach(item => {
-      const match = item.text.match(/^(WEEK \d+|MONTH \d+ CERT|MONTH \d+ PAID|MONTH \d+ SUNDAY|MONTH \d+ NETWORKING|BEFORE YOU START|RECURRING)/i);
-      const sub = match ? match[1].replace(/MONTH \d+\s*/,'') : 'General';
-      if (!subSections[sub]) subSections[sub] = [];
-      subSections[sub].push(item);
-    });
-
-    // Flatten but add section dividers for context
-    let prevSub = null;
-    group.items.forEach((item, idx) => {
-      const match = item.text.match(/^(WEEK \d+|MONTH \d+ CERT|MONTH \d+ PAID|MONTH \d+ SUNDAY|MONTH \d+ NETWORKING|BEFORE YOU START)/i);
-      const sub = match ? match[1].replace(/MONTH \d+\s*/,'') : 'General';
-      if (sub !== prevSub) {
-        const divLabel = document.createElement('div');
-        divLabel.className = 'section-label';
-        const labels = {
-          'WEEK 1':'Week 1', 'WEEK 2':'Week 2', 'WEEK 3':'Week 3', 'WEEK 4':'Week 4',
-          'WEEK 5':'Week 5', 'WEEK 6':'Week 6', 'WEEK 7':'Week 7', 'WEEK 8':'Week 8',
-          'WEEK 9':'Week 9', 'WEEK 10':'Week 10', 'WEEK 11':'Week 11', 'WEEK 12':'Week 12',
-          'WEEK 13':'Week 13', 'WEEK 14':'Week 14', 'WEEK 15':'Week 15', 'WEEK 16':'Week 16',
-          'WEEK 17':'Week 17', 'WEEK 18':'Week 18', 'WEEK 19':'Week 19', 'WEEK 20':'Week 20',
-          'WEEK 21':'Week 21', 'WEEK 22':'Week 22', 'WEEK 23':'Week 23', 'WEEK 24':'Week 24',
-          'WEEK 25':'Week 25', 'WEEK 26':'Week 26', 'WEEK 27':'Week 27', 'WEEK 28':'Week 28',
-          'WEEK 29':'Week 29', 'WEEK 30':'Week 30', 'WEEK 31':'Week 31', 'WEEK 32':'Week 32',
-          'WEEK 33':'Week 33', 'WEEK 34':'Week 34', 'WEEK 35':'Week 35', 'WEEK 36':'Week 36',
-          'CERT':'🏆 Certifications', 'PAID':'💰 Paid Resources', 'SUNDAY':'✍️ Blog & Brand',
-          'NETWORKING':'🤝 Networking', 'BEFORE YOU START':'⚡ One-Time Setup', 'General':'General',
-        };
-        divLabel.textContent = labels[sub] || sub;
-        sectionWrap.appendChild(divLabel);
-        prevSub = sub;
-      }
-      const id = `${containerId}-${group.section}-${idx}`.replace(/\s+/g, '_');
-      const el = makeItem(item.text, item.tag, item.note || null, id);
-      allItems.push({ id, el, phase });
-      itemPhase[id] = phase;
-      sectionWrap.appendChild(el);
-    });
-
-    monthBlock.appendChild(sectionWrap);
-    container.appendChild(monthBlock);
+function renderList(containerId, items, phase) {
+  const wrap = document.getElementById(containerId);
+  items.forEach((item, i) => {
+    const id = `${containerId}_${i}`;
+    wrap.appendChild(makeItem(id, item.t, item.tag, item.note || null, phase));
   });
 }
 
-function renderRecurring() {
-  const wrap = document.getElementById('recurring-items');
-  RECURRING.forEach((item, idx) => {
-    const id = `recurring-${idx}`;
-    const el = makeItem(item.text, item.tag, null, id);
-    allItems.push({ id, el, phase: 0 });
-    itemPhase[id] = 0;
-    wrap.appendChild(el);
+function renderMonth(parentId, month, phase) {
+  const card = document.createElement('div');
+  card.className = 'month-card';
+  const baseId = `${parentId}_${month.month.replace(/\s/g,'_')}`;
+
+  const head = document.createElement('div');
+  head.className = 'month-head';
+  head.style.background = month.color;
+  const tallyId = `tally_${baseId}`;
+  head.innerHTML = `<div class="month-head-title">${month.month} — ${month.title}</div><span class="month-tally" id="${tallyId}"></span>`;
+  card.appendChild(head);
+
+  month.sections.forEach((sec, si) => {
+    const divLabel = document.createElement('div');
+    divLabel.className = 'sec-div';
+    divLabel.textContent = sec.label;
+    card.appendChild(divLabel);
+
+    const itemWrap = document.createElement('div');
+    itemWrap.className = 'item-wrap';
+    sec.items.forEach((item, ii) => {
+      const id = `${baseId}_s${si}_i${ii}`;
+      itemWrap.appendChild(makeItem(id, item.t, item.tag, item.note || null, phase));
+    });
+    card.appendChild(itemWrap);
   });
+
+  document.getElementById(parentId).appendChild(card);
 }
 
-// ─── STATE ───────────────────────────────────────────────────────────────────
-function saveState(id, done) {
-  try { const s = JSON.parse(localStorage.getItem('checklist_p123') || '{}'); s[id] = done; localStorage.setItem('checklist_p123', JSON.stringify(s)); } catch(e){}
-}
-function loadState(id) {
-  try { return JSON.parse(localStorage.getItem('checklist_p123') || '{}')[id] || false; } catch(e){ return false; }
-}
+// ── init ─────────────────────────────────────────────────────────────
+renderList('r-items', RECURRING, 0);
+renderList('setup-items', SETUP, 0);
+PHASES.p1.forEach(m => renderMonth('phase1', m, 1));
+PHASES.p2.forEach(m => renderMonth('phase2', m, 2));
+PHASES.p3.forEach(m => renderMonth('phase3', m, 3));
+renderList('la-items', LOOKAHEAD, 0);
 
-function toggleItem(el, id) {
-  const done = !el.classList.contains('done');
-  el.classList.toggle('done', done);
-  saveState(id, done);
+// ── progress ─────────────────────────────────────────────────────────
+function updateProgress() {
+  const counts = { tot:0, don:0, p1:0,p1d:0, p2:0,p2d:0, p3:0,p3d:0 };
+  allItems.forEach(x => {
+    if (x.el.style.display === 'none') return;
+    counts.tot++;
+    if (x.checked) counts.don++;
+    if (x.phase === 1) { counts.p1++; if (x.checked) counts.p1d++; }
+    if (x.phase === 2) { counts.p2++; if (x.checked) counts.p2d++; }
+    if (x.phase === 3) { counts.p3++; if (x.checked) counts.p3d++; }
+  });
+  document.getElementById('s-done').textContent = counts.don;
+  document.getElementById('s-left').textContent = counts.tot - counts.don;
+  document.getElementById('s-pct').textContent = counts.tot ? Math.round(counts.don/counts.tot*100)+'%' : '0%';
+  document.getElementById('prog-label').textContent = `${counts.don} / ${counts.tot}`;
+  document.getElementById('prog-fill').style.width = counts.tot ? (counts.don/counts.tot*100)+'%' : '0%';
+  const pct = (d,t) => t ? Math.round(d/t*100)+'%' : '0%';
+  document.getElementById('b1').style.width = pct(counts.p1d,counts.p1);
+  document.getElementById('c1').textContent = `${counts.p1d}/${counts.p1}`;
+  document.getElementById('b2').style.width = pct(counts.p2d,counts.p2);
+  document.getElementById('c2').textContent = `${counts.p2d}/${counts.p2}`;
+  document.getElementById('b3').style.width = pct(counts.p3d,counts.p3);
+  document.getElementById('c3').textContent = `${counts.p3d}/${counts.p3}`;
+}
+updateProgress();
+
+// ── filter ────────────────────────────────────────────────────────────
+let currentFilter = 'all';
+function filter(mode) {
+  currentFilter = mode;
+  ['all','open','done'].forEach(m => document.getElementById('f-'+m)?.classList.toggle('active', m===mode));
+  allItems.forEach(x => {
+    const show = mode==='all' || (mode==='open' && !x.checked) || (mode==='done' && x.checked);
+    x.el.style.display = show ? '' : 'none';
+  });
   updateProgress();
 }
 
+// ── reset ─────────────────────────────────────────────────────────────
 function resetAll() {
   if (!confirm('Reset all checkboxes? This cannot be undone.')) return;
-  try { localStorage.removeItem('checklist_p123'); } catch(e){}
-  allItems.forEach(({ el }) => el.classList.remove('done'));
+  try { localStorage.removeItem('cl123_v2'); } catch(e) {}
+  allItems.forEach(x => { x.checked = false; x.el.classList.remove('done'); });
   updateProgress();
 }
-
-// ─── PROGRESS ────────────────────────────────────────────────────────────────
-function updateProgress() {
-  const counts = { total: 0, done: 0, p1: 0, p1d: 0, p2: 0, p2d: 0, p3: 0, p3d: 0 };
-  allItems.forEach(({ el, phase }) => {
-    const visible = el.style.display !== 'none';
-    if (!visible) return;
-    const done = el.classList.contains('done');
-    counts.total++;
-    if (done) counts.done++;
-    if (phase === 1) { counts.p1++; if (done) counts.p1d++; }
-    if (phase === 2) { counts.p2++; if (done) counts.p2d++; }
-    if (phase === 3) { counts.p3++; if (done) counts.p3d++; }
-  });
-  document.getElementById('total-done').textContent = counts.done;
-  document.getElementById('total-left').textContent = counts.total - counts.done;
-  document.getElementById('total-pct').textContent = counts.total ? Math.round(counts.done / counts.total * 100) + '%' : '0%';
-  document.getElementById('prog-label').textContent = `${counts.done} / ${counts.total}`;
-  document.getElementById('prog-fill').style.width = counts.total ? (counts.done / counts.total * 100) + '%' : '0%';
-
-  const pct = (d, t) => t ? Math.round(d / t * 100) : 0;
-  document.getElementById('p1-fill').style.width = pct(counts.p1d, counts.p1) + '%';
-  document.getElementById('p1-count').textContent = `${counts.p1d} / ${counts.p1}`;
-  document.getElementById('p2-fill').style.width = pct(counts.p2d, counts.p2) + '%';
-  document.getElementById('p2-count').textContent = `${counts.p2d} / ${counts.p2}`;
-  document.getElementById('p3-fill').style.width = pct(counts.p3d, counts.p3) + '%';
-  document.getElementById('p3-count').textContent = `${counts.p3d} / ${counts.p3}`;
-}
-
-// ─── FILTER ──────────────────────────────────────────────────────────────────
-function filterItems(mode) {
-  ['f-all','f-active','f-done'].forEach(id => {
-    document.getElementById(id).classList.remove('primary');
-  });
-  document.getElementById('f-' + mode).classList.add('primary');
-  allItems.forEach(({ el }) => {
-    const done = el.classList.contains('done');
-    if (mode === 'all') el.style.display = '';
-    else if (mode === 'active') el.style.display = done ? 'none' : '';
-    else if (mode === 'done') el.style.display = done ? '' : 'none';
-  });
-  updateProgress();
-}
-
-// ─── INIT ────────────────────────────────────────────────────────────────────
-renderRecurring();
-renderGroup('phase1-items', PHASE1, 1);
-renderGroup('phase2-items', PHASE2, 2);
-renderGroup('phase3-items', PHASE3, 3);
-updateProgress();
 </script>
 </body>
 </html>
