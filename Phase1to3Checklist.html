@@ -244,6 +244,10 @@ const RECURRING = [
   { t: 'EVERY SUNDAY: Update /now page on portfolio — current project, current learning, current reading', tag: 'brand' },
   { t: 'EVERY MONTH: Attend at least 3 in-person NYC tech events', tag: 'net' },
   { t: 'Log all study hours in Toggl or Notion — target 24–28 hours per week', tag: 'do' },
+  { t: 'DAILY: Read The Pragmatic Engineer (free tier, pragmaticengineer.com) — 10 min every morning', tag: 'do', note: '#1 engineering newsletter, 1M+ readers. If you only subscribe to one thing, this is it.' },
+  { t: 'DAILY: Spend 10 minutes on Hacker News (news.ycombinator.com) — front page + Ask HN', tag: 'do', note: 'First Monday of each month: "Who is Hiring?" thread — bookmark it.' },
+  { t: 'WEEKLY FRIDAY: Read Hacker Newsletter (hackernewsletter.com) — curated weekly digest of the best HN posts', tag: 'do', note: 'Free. Replaces 2+ hours of browsing with 15 minutes of curated signal.' },
+  { t: 'WEEKLY: Read Y Combinator blog (ycombinator.com/blog) + follow @ycombinator on X — startup + product ecosystem awareness', tag: 'do' },
 ];
 
 const SETUP = [
@@ -257,6 +261,11 @@ const SETUP = [
   { t: 'Sign up on Meetup.com: NY Tech Meetup, NYC Python, NY Code + Coffee, Black Tech NYC, AI & ML NYC', tag: 'net' },
   { t: 'Find 1 #100DaysofCode accountability partner on X/Twitter — DM them before Day 1', tag: 'net' },
   { t: 'Set billing alerts on AWS, GCP, and Azure free tiers before using any cloud service', tag: 'do' },
+  { t: 'SUBSCRIBE: The Pragmatic Engineer — free tier at pragmaticengineer.com (paid $15/mo optional)', tag: 'do', note: '#1 tech newsletter on Substack. Big tech and startup engineering, career, compensation, leadership.' },
+  { t: 'SUBSCRIBE: Hacker Newsletter — free weekly digest at hackernewsletter.com', tag: 'do', note: 'Hand-curated since 2010. 60K+ subscribers. Best HN posts, one email per week.' },
+  { t: 'BOOKMARK: Hacker News — news.ycombinator.com. Set as browser homepage.', tag: 'do' },
+  { t: 'SUBSCRIBE: Y Combinator blog — ycombinator.com/blog. Follow @ycombinator on X.', tag: 'do' },
+  { t: 'SUBSCRIBE: TLDR Tech — free daily 5-minute newsletter at tldr.tech', tag: 'do' },
 ];
 
 // Phase 1, 2, 3 — each entry is a month with sections
@@ -278,6 +287,8 @@ p1: [
         { t: 'Watch fCC Python 14-hr YouTube course — first 3 hours alongside Guttag', tag: 'do', note: 'youtu.be/rfscVS0vtbw' },
         { t: 'Create GitHub profile README and first repo: "python-fundamentals"', tag: 'build' },
         { t: 'POST: Day 1 of #100DaysofCode on X/Twitter — do it today, right now', tag: 'brand' },
+        { t: 'MIT OCW 6.0001 — watch Lectures 1–6 (free, taught by Guttag, Bell, Grimson) alongside Guttag book Chs 1–4', tag: 'do', note: 'ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/' },
+        { t: 'Subscribe to 4 newsletters: Pragmatic Engineer, Hacker Newsletter, TLDR Tech, The Hacker News (cybersecurity) — setup morning reading habit', tag: 'do' },
       ]},
       { label: 'Week 2 — Data Structures, OOP & Git Workflow', items: [
         { t: 'READ: Guttag Chapters 5–7 — Structured Types, Mutability, Modules & Files', tag: 'read', note: '★ You own this. More rigorous than Automate the Boring Stuff — read both in parallel.' },
@@ -285,6 +296,7 @@ p1: [
         { t: 'CS50x Week 2 (Arrays) + Week 3 (Algorithms)', tag: 'do', note: 'cs50.harvard.edu/x/' },
         { t: 'HackerRank Python (Easy): solve 10 problems', tag: 'do', note: 'hackerrank.com/domains/python' },
         { t: 'Git deep dive — branching, merging, rebasing on Learn Git Branching (learngitbranching.js.org)', tag: 'do' },
+        { t: 'MIT OCW 6.0001 Problem Set 1: Paying Off Credit Card Debt + Bisection Search', tag: 'build', note: 'Real MIT undergrad problem set. Do it before checking the solutions. ocw.mit.edu/courses/6-0001-...pages/assignments/' },
       ]},
       { label: 'Week 3 — OOP, File I/O & Error Handling', items: [
         { t: 'READ: Guttag Chapters 8–10 — Testing & Debugging, Exceptions, Classes & OOP', tag: 'read', note: '★ You own this. Ch 8 on debugging will save you hours every week for 18 months.' },
@@ -292,6 +304,8 @@ p1: [
         { t: 'Real Python OOP tutorial series (realpython.com/python3-object-oriented-programming)', tag: 'do' },
         { t: 'BUILD: Personal CLI Task Manager in Python — first mini-project', tag: 'build' },
         { t: 'POST: LinkedIn — share your first project screenshot', tag: 'brand' },
+        { t: 'MIT OCW 6.0001 Problem Set 2: Hangman game implementation', tag: 'build', note: '★ Tests string manipulation, loops, and functions. Complete alongside Guttag Chs 8–10.' },
+        { t: 'WATCH: Leon Noel / 100Devs Class 1 — "How to Learn" (YouTube, ~45 min)', tag: 'do', note: 'youtube.com/@leonnoel — search "100Devs Class 1". Best free resource on learning to code. Watch once this week.' },
       ]},
       { label: 'Week 4 — Linux CLI + Git Mastery + Month Wrap', items: [
         { t: 'The Odin Project: Foundations — Command Line Basics (theodinproject.com)', tag: 'do' },
@@ -300,6 +314,8 @@ p1: [
         { t: 'CS50x Week 4 (Memory) — understand pointer concepts', tag: 'do' },
         { t: 'Push all Weeks 1–4 code to GitHub, write proper READMEs', tag: 'build' },
         { t: 'PUBLISH blog post: "Back to Code After 15 Years: What Month 1 Taught Me"', tag: 'brand' },
+        { t: 'MIT OCW 6.0001 Problem Set 3: Word Game (Scrabble clone)', tag: 'build', note: 'Most challenging of the MIT problem sets — string processing + algorithms. Do as much as you can.' },
+        { t: 'WATCH: Leon Noel / 100Devs Class 6 — Networking (YouTube)', tag: 'do', note: 'youtube.com/@leonnoel — search "100Devs Class 6 Networking". Best developer networking class available free. Apply immediately.' },
         { t: 'PUBLISH blog post: "Why Every Technical PM Will Need to Read Code by 2027"', tag: 'brand' },
       ]},
       { label: 'Month 1 Certifications', items: [
@@ -444,6 +460,7 @@ p2: [
         { t: 'ATTEND: React NYC meetup (monthly, rotating offices)', tag: 'net', note: 'meetup.com/react-nyc/' },
         { t: 'ATTEND: Blacks in Technology NYC (monthly)', tag: 'net', note: 'blacksintechnology.net' },
         { t: 'ATTEND: 1 Million Cups NYC (weekly Wednesday AM) — good for consulting leads', tag: 'net', note: '1millioncups.com/newyorkcity' },
+        { t: 'WATCH: Leon Noel / 100Devs Classes 39–41 — Client Acquisition (YouTube)', tag: 'do', note: 'youtube.com/@leonnoel — search "100Devs Class 39". How to get freelance clients, cold outreach templates, pricing. Apply to your consulting prep.' },
       ]},
     ],
   },
@@ -653,6 +670,7 @@ p3: [
         { t: 'Deploy Project 8 to GitHub as an open-source template — write detailed README and CONTRIBUTING.md', tag: 'build' },
         { t: 'BOOK: AWS Cloud Practitioner exam at examregistration.aws.training (~$100)', tag: 'cert', note: 'Take it in Month 12 — book now to commit.' },
         { t: 'START: Google AI Professional Certificate 7-day free trial on Coursera — earn it Week 37', tag: 'cert', note: '⭐ NEW CERT — coursera.org/professional-certificates/google-ai — ~$49, completable in one weekend' },
+        { t: 'DOWNLOAD: CompTIA Security+ SY0-701 official exam objectives PDF (free from comptia.org) — read it now to know what Month 15 will cover', tag: 'do', note: 'comptia.org/training/resources/exam-objectives — sets expectations for the Month 15 security block' },
         { t: 'SUBMIT: CFP to NYC Tech Week (nyctechweek.xyz) — talk: "From PM to AI Engineer"', tag: 'net', note: 'CFP typically March–April. Submit this month.' },
         { t: 'PUBLISH blog post: "9-Month Retrospective: From PM to Engineer — The Inflection Point"', tag: 'brand' },
         { t: 'PUBLISH blog post: "System Design for Product Managers: What I Wish I Knew Sooner"', tag: 'brand' },
@@ -660,6 +678,7 @@ p3: [
       { label: 'Month 9 Certifications', items: [
         { t: 'CERT: Book AWS Cloud Practitioner exam — take it in Month 12', tag: 'cert' },
         { t: 'CERT: Start Google AI Professional Certificate trial — earn it in Week 37 (first week of Phase 4)', tag: 'cert', note: '⭐ NEW — coursera.org/professional-certificates/google-ai' },
+        { t: 'PLAN: CompTIA Security+ SY0-701 — Month 15 is your full security prep month, exam in Month 16 Week 62', tag: 'cert', note: '$425 exam fee — ask your current employer to reimburse as professional development before you leave' },
       ]},
       { label: 'Month 9 Networking', items: [
         { t: 'ATTEND: NYC GraphQL meetup (bi-monthly)', tag: 'net', note: 'meetup.com/NYC-GraphQL/' },
@@ -677,6 +696,8 @@ p3: [
 const LOOKAHEAD = [
   { t: 'MONTH 10 — Earn: Google AI Professional Certificate (~$49, one weekend, coursera.org/professional-certificates/google-ai)', tag: 'cert', note: '⭐ NEW — Validated by major employers. 20+ hands-on AI work scenarios. Earn it in Week 37, the very first week of Phase 4.' },
   { t: 'MONTH 12 — Earn: Google Cloud Generative AI Leader Certification ($99 exam, 90 min, cloud.google.com/learn/certification/generative-ai-leader)', tag: 'cert', note: '⭐ NEW — Designed for leaders and executives, not just engineers. Prep FREE via cloudskillsboost.google. This separates CTO candidates from VP Engineering candidates.' },
+  { t: 'MONTH 15 — Prep: CompTIA Security+ SY0-701 — full 4-week prep month using Professor Messer free course (professormesser.com), PortSwigger, CS50 Cybersecurity, TryHackMe, Jason Dion practice exams (~$15 Udemy)', tag: 'cert', note: '⭐ DoD 8570/8140 compliant. Required or strongly preferred for government and many nonprofit client contracts. $425 exam, valid 3 years. Book exam for Month 16 Week 62.' },
+  { t: 'MONTH 16 — Earn: CompTIA Security+ SY0-701 — take the exam Week 62, the week after earning CCA-F', tag: 'cert', note: '$425 at Pearson VUE in-person or online proctored. Check if current employer will reimburse before leaving.' },
   { t: 'MONTH 16 — Earn: Claude Certified Architect, Foundations CCA-F ($99 exam, 120 min, anthropic.com)', tag: 'cert', note: '🥇 HIGHEST PRIORITY — Anthropic\'s first official technical cert, launched March 2026. Agentic architecture, Claude Code, MCP, prompt engineering, context management. Prep entirely FREE via Anthropic Academy. Accenture is training 30,000 professionals on this — be an early credentialed holder.' },
 ];
 
