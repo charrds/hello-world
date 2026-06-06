@@ -1896,6 +1896,13 @@ body {
     </ul>
   </div>
 
+  <div class="info-box electric" style="margin-bottom:20px">
+    <div class="info-box-title">📖 Phase 3 Reading — Head First Design Patterns (One Pattern Per Week, Month 7 Weeks 25–28)</div>
+    <ul>
+      <li><strong>Head First Design Patterns: Building Extensible and Maintainable Object-Oriented Software</strong> (2nd ed., 2020) by Eric Freeman and Elisabeth Robson — the most accessible introduction to the 23 Gang of Four design patterns. Read one pattern chapter per week across the four weeks of Month 7, implementing each pattern in Python after reading the Java examples. The patterns covered — Strategy, Observer, Decorator, Factory, Singleton, Command, Adapter, Facade, Template Method, Iterator, Composite, State, Proxy, and MVC — map directly onto the code you are writing in Projects 6 and 7. <strong>One important note:</strong> all code examples are in Java, which you won't have studied. This is fine — by Month 7 Java syntax is largely readable after Guttag's OOP chapters and your Python work, and the Head First visual format carries the learning through diagrams rather than code. After each pattern, implement it yourself in Python using <a href="https://github.com/faif/python-patterns" target="_blank" style="color:var(--electric)">github.com/faif/python-patterns</a> as a companion reference. The GoF original (<em>Design Patterns</em> by Gamma, Helm, Johnson, Vlissides) is the canonical reference this book teaches — you don't need it, but knowing it exists matters for senior engineering conversations.</li>
+    </ul>
+  </div>
+
   <div class="collapsible open">
     <div class="collapsible-header" onclick="toggleCollapse(this.parentElement)">
       <span style="font-size:16px">⚙️</span><span class="collapsible-title">Month 7 — Node.js, Express &amp; REST API Design</span><span class="collapsible-arrow">▼</span>
@@ -1903,6 +1910,7 @@ body {
     <div class="collapsible-body"><div class="collapsible-inner">
       <ul class="resource-list">
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://www.theodinproject.com/paths/full-stack-javascript/courses/nodejs" target="_blank">The Odin Project: NodeJS Course</a><span class="resource-url">https://www.theodinproject.com/paths/full-stack-javascript/courses/nodejs</span></div></li>
+        <li class="resource-item"><span class="resource-dot" style="color:var(--gold)">⭐</span><div><span style="color:var(--gold);font-weight:700">Head First Design Patterns (2nd ed.) — read this month:</span> O'Reilly, ~$55 on Amazon or included in O'Reilly subscription. One pattern chapter per week, Weeks 25–28. All examples are in Java — read for structure, then implement in Python. Companion: <a href="https://github.com/faif/python-patterns" target="_blank" style="color:var(--electric)">github.com/faif/python-patterns</a><span class="resource-url">Amazon ISBN: 9781492078005</span></div></li>
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://www.freecodecamp.org/learn/back-end-development-and-apis/" target="_blank">fCC Back End Development &amp; APIs Cert</a><span class="resource-url">https://www.freecodecamp.org/learn/back-end-development-and-apis/</span></div></li>
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://expressjs.com/en/guide/routing.html" target="_blank">Express.js Guide</a><span class="resource-url">https://expressjs.com/en/guide/routing.html</span></div></li>
         <li class="resource-item"><span class="resource-dot">●</span><div><a href="https://www.prisma.io/docs" target="_blank">Prisma ORM Docs</a><span class="resource-url">https://www.prisma.io/docs</span></div></li>
@@ -1918,6 +1926,7 @@ body {
             <div class="week-col-label">Action Items</div>
             <ul class="bullet-list">
               <li>Node.js fundamentals: event loop, non-blocking I/O, Buffer, streams, EventEmitter</li>
+              <li>Start <strong>Head First Design Patterns</strong> — Ch 1: Strategy Pattern (SimUDuck). Read the Java code for structure, then implement the pattern yourself in Python before Week 26. Bookmark <a href="https://github.com/faif/python-patterns" target="_blank">github.com/faif/python-patterns</a> as your Python companion.</li>
               <li>The Odin Project NodeJS Course — complete the Introduction section</li>
               <li>npm ecosystem: package.json scripts, versioning, npx, workspaces</li>
               <li>Build a Node.js CLI tool that reads files and transforms data — no frameworks yet</li>
@@ -1944,6 +1953,7 @@ body {
             <ul class="bullet-list">
               <li>Express.js: routing, middleware chain, error handling, express.Router()</li>
               <li>REST API design principles: resource naming, HTTP verbs, status codes, versioning</li>
+              <li><strong>Head First Design Patterns</strong> — Ch 2: Observer Pattern + Ch 3: Decorator Pattern. Observer maps directly onto your WebSocket event system in Project 7. Implement both in Python.</li>
               <li>Prisma ORM: schema.prisma, migrations, model relations, Prisma Studio</li>
               <li>Set up Postman with environments for local and deployed API testing</li>
               <li>Build: simple CRUD API for a to-do list with Express + Prisma + PostgreSQL</li>
@@ -1973,6 +1983,7 @@ body {
               <li>Implement full auth flow: register, login, protected routes, refresh</li>
               <li>OAuth2 concepts: authorization code flow, PKCE — integrate GitHub OAuth in a demo app</li>
               <li>Read Clean Code by Robert Martin (library/Amazon) — start this week, read alongside building</li>
+              <li><strong>Head First Design Patterns</strong> — Ch 4: Factory Pattern + Ch 5: Singleton. Factory is immediately applicable to your database connection management in Project 6. Implement both in Python.</li>
               <li>Start <strong>Super Thinking</strong> by Gabriel Weinberg &amp; Lauren McCann — one chapter per week through Month 9. Read one chapter every Sunday morning before your portfolio update. Apply each mental model to a real decision you made that week — architectural choices, prioritisation calls, or how you approached a hard debugging problem.</li>
             </ul>
           </div>
@@ -1995,6 +2006,7 @@ body {
             <div class="week-col-label">Action Items</div>
             <ul class="bullet-list">
               <li>Redis: data types, TTL, caching patterns, rate limiting, pub/sub basics</li>
+              <li><strong>Head First Design Patterns</strong> — Ch 6: Command Pattern + Ch 7: Adapter &amp; Facade. Facade is exactly what you're building in Project 6 when you wrap your database and Redis layers behind a clean service interface.</li>
               <li>Redis University FREE course: RU101 Introduction to Redis Data Structures</li>
               <li>BUILD PROJECT 6 — Developer Community REST API (Node.js, Express, PostgreSQL, Prisma, JWT, Redis, Docker)</li>
               <li>Deploy Project 6 to Railway or Render — write Swagger/OpenAPI docs at /api-docs</li>
@@ -3754,6 +3766,7 @@ body {
           <tr style="background:rgba(245,166,35,0.06)"><td><strong>📖 The Pyramid Principle</strong></td><td>Barbara Minto</td><td>Month 4</td><td style="color:var(--gold);font-weight:700">You own it</td><td>MECE thinking and top-down structured communication — the McKinsey framework. Makes every blog post, ADR, consulting proposal, and board presentation sharper. Seek the 1996 Minto Books edition.</td></tr>
           <tr style="background:rgba(245,166,35,0.06)"><td><strong>📖 Super Thinking</strong></td><td>Weinberg &amp; McCann</td><td>Months 7–9 (1 ch/wk)</td><td style="color:var(--gold);font-weight:700">You own it</td><td>300+ mental models from economics, physics, statistics, and organizational behavior. Read one chapter per Sunday through Phase 3. Apply each model to a real decision made that week.</td></tr>
           <tr style="background:rgba(245,166,35,0.06)"><td><strong>📖 The Neurodiversity Edge</strong></td><td>Maureen Dunne</td><td>Month 14</td><td style="color:var(--gold);font-weight:700">You own it</td><td>Building high-performing teams through authentic neuroinclusion. Practical framework for interview design, psychological safety, and hybrid work. Essential for nonprofit and government client work.</td></tr>
+          <tr style="background:rgba(43,143,255,0.05)"><td><strong>📖 Head First Design Patterns (2nd ed.)</strong></td><td>Freeman &amp; Robson</td><td>Month 7 (Wks 25–28)</td><td>~$55 / O'Reilly sub</td><td>All 23 GoF design patterns — Strategy, Observer, Factory, Decorator, MVC, and more. Java examples; implement each in Python after reading. One pattern per week. Directly applicable to Projects 6 and 7.</td></tr>
         </tbody>
       </table>
     </div></div>
