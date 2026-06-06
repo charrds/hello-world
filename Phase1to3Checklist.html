@@ -222,7 +222,7 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); font
 <div class="lookahead">
   <div class="la-label">Looking Ahead — Phase 4+</div>
   <div class="la-title">3 High-Priority Certifications Coming Up</div>
-  <div class="la-sub">These fall in Phases 4–6. Plan ahead so you're ready when the month arrives. Also remember your four additional reading assignments: The Big Stretch (this weekend), The Pyramid Principle (Month 4), Super Thinking (Months 7–9), and The Neurodiversity Edge (Month 14).</div>
+  <div class="la-sub">These fall in Phases 4–6. Plan ahead so you're ready when the month arrives. Also remember your reading assignments: The Big Stretch (this weekend), The Pyramid Principle (Month 4), Head First Design Patterns (Month 7, one pattern/week), Super Thinking (Months 7–9), and The Neurodiversity Edge (Month 14).</div>
   <div id="la-items"></div>
 </div>
 
@@ -565,6 +565,7 @@ p3: [
       { label: 'Week 25 — Node.js Core + npm Ecosystem', items: [
         { t: 'Node.js fundamentals: event loop, non-blocking I/O, Buffer, streams, EventEmitter', tag: 'do', note: 'The Odin Project NodeJS: theodinproject.com/paths/full-stack-javascript/courses/nodejs' },
         { t: 'The Odin Project NodeJS Course — complete the Introduction section', tag: 'do' },
+        { t: 'READ: Head First Design Patterns Ch 1 — Strategy Pattern. Read Java examples for structure, then implement in Python.', tag: 'read', note: 'Companion: github.com/faif/python-patterns — has every pattern in clean Python. Buy the book (~$55 Amazon) or access via O'Reilly subscription.' },
         { t: 'npm ecosystem: package.json scripts, versioning, npx, workspaces', tag: 'do' },
         { t: 'fCC Back End Development & APIs Cert — start the npm and Node modules sections', tag: 'do', note: 'freecodecamp.org/learn/back-end-development-and-apis/' },
         { t: 'BUILD: Node.js CLI tool that reads and transforms file data — no frameworks yet', tag: 'build' },
@@ -572,6 +573,7 @@ p3: [
       { label: 'Week 26 — Express.js + REST API Design + Prisma ORM', items: [
         { t: 'Express.js: routing, middleware chain, error handling, express.Router()', tag: 'do', note: 'expressjs.com/en/guide/routing.html' },
         { t: 'REST API design: resource naming, HTTP verbs, status codes, versioning, pagination', tag: 'do' },
+        { t: 'READ: Head First Design Patterns Ch 2 (Observer) + Ch 3 (Decorator) — implement both in Python', tag: 'read', note: 'Observer maps directly onto your WebSocket event system in Project 7. Implement after reading.' },
         { t: 'Prisma ORM: schema.prisma, migrations, model relations, Prisma Studio (prisma.io/docs)', tag: 'do' },
         { t: 'Set up Postman with environments for local and deployed API testing (postman.com)', tag: 'do' },
         { t: 'BUILD: simple CRUD API for a to-do list — Express + Prisma + PostgreSQL', tag: 'build' },
@@ -582,10 +584,12 @@ p3: [
         { t: 'Implement full auth flow: register, login, protected routes, refresh tokens', tag: 'build' },
         { t: 'OAuth2 concepts: authorization code flow, PKCE — integrate GitHub OAuth in a demo app', tag: 'do' },
         { t: 'READ: Clean Code by Robert Martin (library/Amazon) — start this week, read alongside building', tag: 'read' },
+        { t: 'READ: Head First Design Patterns Ch 4 (Factory) + Ch 5 (Singleton) — implement both in Python', tag: 'read', note: 'Factory is directly applicable to database connection management in Project 6.' },
         { t: 'START: Super Thinking by Gabriel Weinberg & Lauren McCann — one chapter every Sunday through Month 9 (12 weeks)', tag: 'read', note: '★ You own this. 300+ mental models from economics, physics, stats, org behavior. Read Sunday AM before portfolio update. Apply each model to a real decision you made that week.' },
       ]},
       { label: 'Week 28 — Redis Caching + Build & Deploy Project 6', items: [
         { t: 'Redis: data types, TTL, caching patterns, rate limiting, pub/sub basics', tag: 'do' },
+        { t: 'READ: Head First Design Patterns Ch 6 (Command) + Ch 7 (Adapter & Facade) — implement both in Python', tag: 'read', note: 'Facade applies directly to Project 6 — wrapping database and Redis layers behind a clean service interface.' },
         { t: 'Redis University FREE course: RU101 Introduction to Redis Data Structures (university.redis.com)', tag: 'do' },
         { t: 'BUILD PROJECT 6: Developer Community REST API', tag: 'build', note: 'Stack: Node.js, Express, PostgreSQL, Prisma, JWT auth, Redis caching, Docker. Must include Swagger/OpenAPI docs at /api-docs.' },
         { t: 'Deploy Project 6 to Railway or Render (railway.app)', tag: 'build' },
